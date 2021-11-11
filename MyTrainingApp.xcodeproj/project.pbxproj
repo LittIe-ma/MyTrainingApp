@@ -13,6 +13,17 @@
 		30E3BB0C273B5FC600702F43 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3BB0A273B5FC600702F43 /* Home.storyboard */; };
 		30E3BB0E273B5FCE00702F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30E3BB0D273B5FCE00702F43 /* Assets.xcassets */; };
 		30E3BB11273B5FCE00702F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3BB0F273B5FCE00702F43 /* LaunchScreen.storyboard */; };
+		30E3BB19273B6EAE00702F43 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3BB18273B6EAE00702F43 /* Profile.storyboard */; };
+		30E3BB1B273B6ECD00702F43 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB1A273B6ECD00702F43 /* ProfileViewController.swift */; };
+		30E3BB1D273B6FAB00702F43 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB1C273B6FAB00702F43 /* PostViewController.swift */; };
+		30E3BB1F273B6FC000702F43 /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3BB1E273B6FBF00702F43 /* Post.storyboard */; };
+		30E3BB21273B6FD900702F43 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3BB20273B6FD900702F43 /* Login.storyboard */; };
+		30E3BB23273B6FE900702F43 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB22273B6FE900702F43 /* LoginViewController.swift */; };
+		30E3BB25273B733000702F43 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3BB24273B733000702F43 /* Root.storyboard */; };
+		30E3BB27273B74AF00702F43 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3BB26273B74AF00702F43 /* Settings.storyboard */; };
+		30E3BB29273B74C200702F43 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB28273B74C200702F43 /* SettingsViewController.swift */; };
+		30E3BB2B273C9D6A00702F43 /* KeepListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB2A273C9D6900702F43 /* KeepListViewController.swift */; };
+		30E3BB2D273C9D7400702F43 /* KeepList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3BB2C273C9D7400702F43 /* KeepList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		30E3BB0D273B5FCE00702F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30E3BB10273B5FCE00702F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30E3BB12273B5FCE00702F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30E3BB18273B6EAE00702F43 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		30E3BB1A273B6ECD00702F43 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		30E3BB1C273B6FAB00702F43 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		30E3BB1E273B6FBF00702F43 /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
+		30E3BB20273B6FD900702F43 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		30E3BB22273B6FE900702F43 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		30E3BB24273B733000702F43 /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		30E3BB26273B74AF00702F43 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		30E3BB28273B74C200702F43 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		30E3BB2A273C9D6900702F43 /* KeepListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepListViewController.swift; sourceTree = "<group>"; };
+		30E3BB2C273C9D7400702F43 /* KeepList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KeepList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +85,17 @@
 				30E3BB0D273B5FCE00702F43 /* Assets.xcassets */,
 				30E3BB0F273B5FCE00702F43 /* LaunchScreen.storyboard */,
 				30E3BB12273B5FCE00702F43 /* Info.plist */,
+				30E3BB18273B6EAE00702F43 /* Profile.storyboard */,
+				30E3BB1A273B6ECD00702F43 /* ProfileViewController.swift */,
+				30E3BB1E273B6FBF00702F43 /* Post.storyboard */,
+				30E3BB1C273B6FAB00702F43 /* PostViewController.swift */,
+				30E3BB20273B6FD900702F43 /* Login.storyboard */,
+				30E3BB22273B6FE900702F43 /* LoginViewController.swift */,
+				30E3BB24273B733000702F43 /* Root.storyboard */,
+				30E3BB26273B74AF00702F43 /* Settings.storyboard */,
+				30E3BB28273B74C200702F43 /* SettingsViewController.swift */,
+				30E3BB2C273C9D7400702F43 /* KeepList.storyboard */,
+				30E3BB2A273C9D6900702F43 /* KeepListViewController.swift */,
 			);
 			path = MyTrainingApp;
 			sourceTree = "<group>";
@@ -127,6 +160,12 @@
 			files = (
 				30E3BB11273B5FCE00702F43 /* LaunchScreen.storyboard in Resources */,
 				30E3BB0E273B5FCE00702F43 /* Assets.xcassets in Resources */,
+				30E3BB21273B6FD900702F43 /* Login.storyboard in Resources */,
+				30E3BB2D273C9D7400702F43 /* KeepList.storyboard in Resources */,
+				30E3BB27273B74AF00702F43 /* Settings.storyboard in Resources */,
+				30E3BB19273B6EAE00702F43 /* Profile.storyboard in Resources */,
+				30E3BB25273B733000702F43 /* Root.storyboard in Resources */,
+				30E3BB1F273B6FC000702F43 /* Post.storyboard in Resources */,
 				30E3BB0C273B5FC600702F43 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E3BB23273B6FE900702F43 /* LoginViewController.swift in Sources */,
 				30E3BB09273B5FC600702F43 /* HomeViewController.swift in Sources */,
+				30E3BB29273B74C200702F43 /* SettingsViewController.swift in Sources */,
 				30E3BB05273B5FC600702F43 /* AppDelegate.swift in Sources */,
+				30E3BB1B273B6ECD00702F43 /* ProfileViewController.swift in Sources */,
 				30E3BB07273B5FC600702F43 /* SceneDelegate.swift in Sources */,
+				30E3BB1D273B6FAB00702F43 /* PostViewController.swift in Sources */,
+				30E3BB2B273C9D6A00702F43 /* KeepListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +338,7 @@
 				INFOPLIST_FILE = MyTrainingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = Root;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -323,7 +367,7 @@
 				INFOPLIST_FILE = MyTrainingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = Root;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
