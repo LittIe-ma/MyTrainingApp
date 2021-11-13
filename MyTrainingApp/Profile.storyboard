@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aCh-yE-Ccy" userLabel="MainStackView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="764"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlt-Es-v8t" userLabel="HeaderMarginView">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
@@ -76,10 +76,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0U-18-bhp" userLabel="BodyMarginView">
-                                                <rect key="frame" x="0.0" y="120" width="414" height="550"/>
+                                                <rect key="frame" x="0.0" y="120" width="414" height="580"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="h4e-eD-hOV" userLabel="BodyStackView">
-                                                        <rect key="frame" x="20" y="10" width="374" height="530"/>
+                                                        <rect key="frame" x="20" y="10" width="374" height="560"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="746-pn-4pX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="10"/>
@@ -345,8 +345,15 @@
                                                                     <constraint firstAttribute="height" constant="70" id="C7U-78-6sH"/>
                                                                 </constraints>
                                                             </stackView>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XxI-ui-OIk">
+                                                                <rect key="frame" x="0.0" y="470" width="374" height="30"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="vm2-sA-IWP"/>
+                                                                </constraints>
+                                                            </view>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRu-yp-7p8">
-                                                                <rect key="frame" x="0.0" y="470" width="374" height="60"/>
+                                                                <rect key="frame" x="0.0" y="500" width="374" height="60"/>
                                                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="LYt-fs-K1V"/>
@@ -368,7 +375,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZu-dk-djL">
-                                                <rect key="frame" x="0.0" y="670" width="414" height="64"/>
+                                                <rect key="frame" x="0.0" y="700" width="414" height="64"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="YZu-dk-djL" secondAttribute="height" multiplier="207:32" id="BJZ-91-1JH"/>
