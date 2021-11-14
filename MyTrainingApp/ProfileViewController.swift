@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureView()
+        setStatusBarbackgroundColor(.green)
         setUpLabel()
     }
 
@@ -31,19 +31,5 @@ class ProfileViewController: UIViewController {
         squatLabel.setUnderLine()
         deadLiftLabel.setUnderLine()
     }
-
-    private func configureView() {
-        setStatusBarbackgroundColor(.green)
-    }
-
 }
 
-extension UILabel {
-    func setUnderLine() {
-        let underLine = UIView()
-        underLine.frame = CGRect(x: 0, y: frame.height, width: UIScreen.main.bounds.size.width, height: 2)
-        underLine.backgroundColor = .purple
-        addSubview(underLine)
-        bringSubviewToFront(underLine)
-    }
-}

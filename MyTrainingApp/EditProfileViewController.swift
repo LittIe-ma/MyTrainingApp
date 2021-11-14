@@ -20,7 +20,7 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureView()
+        setStatusBarbackgroundColor(.green)
         setUpTextField()
     }
 
@@ -32,10 +32,6 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
         print("tapped profile image")
     }
 
-    private func configureView() {
-        setStatusBarbackgroundColor(.green)
-    }
-
     private func setUpTextField() {
         nameInputField.setUnderLine()
         heightInputField.setUnderLine()
@@ -44,15 +40,5 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
         squatInputField.setUnderLine()
         deadLiftInputField.setUnderLine()
     }
-
 }
 
-extension UITextField {
-    func setUnderLine() {
-        let underLine = UIView()
-        underLine.frame = CGRect(x: 0, y: frame.height, width: UIScreen.main.bounds.size.width, height: 2)
-        underLine.backgroundColor = .purple
-        addSubview(underLine)
-        bringSubviewToFront(underLine)
-    }
-}

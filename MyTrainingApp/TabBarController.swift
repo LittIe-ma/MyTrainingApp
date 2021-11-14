@@ -15,5 +15,4 @@ class TabBarController: UITabBarController {
         UITabBar.appearance().tintColor = .purple
         UITabBar.appearance().barTintColor = .green
     }
-
 }
