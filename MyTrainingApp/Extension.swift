@@ -47,3 +47,9 @@ extension UILabel {
         bringSubviewToFront(underLine)
     }
 }
+
+extension UIImageView {
+    func setCircle() {
+        layer.cornerRadius = self.frame.width / 2
+    }
+}

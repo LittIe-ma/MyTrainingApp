@@ -15,13 +15,14 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet private weak var benchPressInputField: UITextField!
     @IBOutlet private weak var squatInputField: UITextField!
     @IBOutlet private weak var deadLiftInputField: UITextField!
-    @IBOutlet private weak var profileImageView: UIImageView!
+    @IBOutlet private weak var editProfileImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setStatusBarbackgroundColor(.green)
         setUpTextField()
+        editProfileImageView.setCircle()
     }
 
     @IBAction func exitByCancel(_ sender: Any) {

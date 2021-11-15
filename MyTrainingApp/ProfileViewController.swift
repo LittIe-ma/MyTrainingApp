@@ -15,12 +15,14 @@ class ProfileViewController: UIViewController {
     @IBOutlet private weak var benchPressLabel: UILabel!
     @IBOutlet private weak var squatLabel: UILabel!
     @IBOutlet private weak var deadLiftLabel: UILabel!
+    @IBOutlet private weak var profileImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setStatusBarbackgroundColor(.green)
         setUpLabel()
+        profileImageView.setCircle()
     }
 
     private func setUpLabel() {

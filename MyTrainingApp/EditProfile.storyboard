@@ -390,9 +390,9 @@
                     <connections>
                         <outlet property="benchPressInputField" destination="hSh-wO-Q5q" id="UKt-22-ylx"/>
                         <outlet property="deadLiftInputField" destination="D0h-Hy-jKR" id="N9R-32-LHN"/>
+                        <outlet property="editProfileImageView" destination="S8m-kQ-iBG" id="0Bo-al-7nO"/>
                         <outlet property="heightInputField" destination="7dD-UD-cOj" id="CUS-Ns-lkv"/>
                         <outlet property="nameInputField" destination="UYb-dx-U15" id="5Hg-lL-OFe"/>
-                        <outlet property="profileImageView" destination="S8m-kQ-iBG" id="DO1-ni-NAY"/>
                         <outlet property="squatInputField" destination="OyB-Tx-7O4" id="xTa-P9-FVi"/>
                         <outlet property="weightInputField" destination="B40-fv-J72" id="uLt-UP-WWl"/>
                     </connections>

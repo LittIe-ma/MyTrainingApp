@@ -438,6 +438,7 @@
                         <outlet property="deadLiftLabel" destination="MAj-CM-rqK" id="cxS-l1-PhO"/>
                         <outlet property="heightLabel" destination="9Zu-0a-JEz" id="C7k-W6-RSB"/>
                         <outlet property="nameLabel" destination="NA3-4F-u03" id="bcQ-BA-ccO"/>
+                        <outlet property="profileImageView" destination="S8m-kQ-iBG" id="Trw-4i-Qo4"/>
                         <outlet property="squatLabel" destination="JXw-rk-blr" id="Ugf-qe-6RA"/>
                         <outlet property="weightLabel" destination="gXj-0a-WfO" id="jdq-bT-iDK"/>
                     </connections>
