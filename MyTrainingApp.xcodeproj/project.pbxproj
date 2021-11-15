@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		30A31C532740249800589A8F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C522740249700589A8F /* Extension.swift */; };
-		30A31C552740295600589A8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C542740295600589A8F /* TabBarController.swift */; };
+		30A31C572742677400589A8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C562742677300589A8F /* TabBarController.swift */; };
+		30A31C59274269FD00589A8F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C58274269FD00589A8F /* NavigationController.swift */; };
 		30E3BB05273B5FC600702F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB04273B5FC600702F43 /* AppDelegate.swift */; };
 		30E3BB07273B5FC600702F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB06273B5FC600702F43 /* SceneDelegate.swift */; };
 		30E3BB09273B5FC600702F43 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB08273B5FC600702F43 /* HomeViewController.swift */; };
@@ -32,7 +33,8 @@
 
 /* Begin PBXFileReference section */
 		30A31C522740249700589A8F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		30A31C542740295600589A8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		30A31C562742677300589A8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		30A31C58274269FD00589A8F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		30E3BB01273B5FC600702F43 /* MyTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E3BB04273B5FC600702F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E3BB06273B5FC600702F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,7 +109,8 @@
 				30E3BB2C273C9D7400702F43 /* KeepList.storyboard */,
 				30E3BB2A273C9D6900702F43 /* KeepListViewController.swift */,
 				30A31C522740249700589A8F /* Extension.swift */,
-				30A31C542740295600589A8F /* TabBarController.swift */,
+				30A31C562742677300589A8F /* TabBarController.swift */,
+				30A31C58274269FD00589A8F /* NavigationController.swift */,
 			);
 			path = MyTrainingApp;
 			sourceTree = "<group>";
@@ -191,8 +194,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E3BB23273B6FE900702F43 /* LoginViewController.swift in Sources */,
+				30A31C59274269FD00589A8F /* NavigationController.swift in Sources */,
 				30E3BB09273B5FC600702F43 /* HomeViewController.swift in Sources */,
-				30A31C552740295600589A8F /* TabBarController.swift in Sources */,
+				30A31C572742677400589A8F /* TabBarController.swift in Sources */,
 				30E3BB29273B74C200702F43 /* SettingsViewController.swift in Sources */,
 				30E3BB05273B5FC600702F43 /* AppDelegate.swift in Sources */,
 				30E3BB1B273B6ECD00702F43 /* ProfileViewController.swift in Sources */,

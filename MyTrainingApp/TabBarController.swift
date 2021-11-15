@@ -1,8 +1,8 @@
 //
-//  UtilTabBar.swift
+//  TabBarController.swift
 //  MyTrainingApp
 //
-//  Created by yasudamasato on 2021/11/14.
+//  Created by yasudamasato on 2021/11/15.
 //
 
 import UIKit
@@ -15,4 +15,6 @@ class TabBarController: UITabBarController {
         UITabBar.appearance().tintColor = .purple
         UITabBar.appearance().barTintColor = .green
     }
+
 }
+

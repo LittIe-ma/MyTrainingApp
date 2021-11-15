@@ -29,7 +29,7 @@
         <!--Navigation Controller-->
         <scene sceneID="B1k-sq-ivp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Qs-oL-2lM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Qs-oL-2lM" customClass="NavigationController" customModule="MyTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nqz-oe-rzE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
