@@ -9,7 +9,7 @@ import UIKit
 
 class PostViewController: UIViewController {
 
-    @IBOutlet private weak var postTextView: UITextView!
+    @IBOutlet private weak var postTextView: PlaceHolderTextView!
     @IBOutlet private weak var profileImageView: UIImageView!
 
     override func viewDidLoad() {
@@ -18,6 +18,7 @@ class PostViewController: UIViewController {
         setStatusBarbackgroundColor(.green)
         profileImageView.setCircle()
         setPostButton()
+        postTextView.placeHolder = "Training menu"
     }
 
     override func viewWillAppear(_ animated: Bool) {
