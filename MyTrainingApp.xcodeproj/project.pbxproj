@@ -10,6 +10,7 @@
 		30A31C532740249800589A8F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C522740249700589A8F /* Extension.swift */; };
 		30A31C572742677400589A8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C562742677300589A8F /* TabBarController.swift */; };
 		30A31C59274269FD00589A8F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C58274269FD00589A8F /* NavigationController.swift */; };
+		30A31C5D2743B18000589A8F /* KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C5C2743B18000589A8F /* KeyBoard.swift */; };
 		30E3BB05273B5FC600702F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB04273B5FC600702F43 /* AppDelegate.swift */; };
 		30E3BB07273B5FC600702F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB06273B5FC600702F43 /* SceneDelegate.swift */; };
 		30E3BB09273B5FC600702F43 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB08273B5FC600702F43 /* HomeViewController.swift */; };
@@ -35,6 +36,7 @@
 		30A31C522740249700589A8F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		30A31C562742677300589A8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		30A31C58274269FD00589A8F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		30A31C5C2743B18000589A8F /* KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoard.swift; sourceTree = "<group>"; };
 		30E3BB01273B5FC600702F43 /* MyTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E3BB04273B5FC600702F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E3BB06273B5FC600702F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				30A31C522740249700589A8F /* Extension.swift */,
 				30A31C562742677300589A8F /* TabBarController.swift */,
 				30A31C58274269FD00589A8F /* NavigationController.swift */,
+				30A31C5C2743B18000589A8F /* KeyBoard.swift */,
 			);
 			path = MyTrainingApp;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				30E3BB1D273B6FAB00702F43 /* PostViewController.swift in Sources */,
 				30E3BB2B273C9D6A00702F43 /* KeepListViewController.swift in Sources */,
 				30E3BB31273F79A100702F43 /* EditProfileViewController.swift in Sources */,
+				30A31C5D2743B18000589A8F /* KeyBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
