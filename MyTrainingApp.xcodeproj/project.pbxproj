@@ -12,6 +12,8 @@
 		30A31C59274269FD00589A8F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C58274269FD00589A8F /* NavigationController.swift */; };
 		30A31C5D2743B18000589A8F /* KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C5C2743B18000589A8F /* KeyBoard.swift */; };
 		30A31C612743ECD900589A8F /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C602743ECD900589A8F /* PlaceHolderTextView.swift */; };
+		30A31C6427453F4200589A8F /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C6227453F4100589A8F /* PostTableViewCell.swift */; };
+		30A31C6527453F4200589A8F /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A31C6327453F4100589A8F /* PostTableViewCell.xib */; };
 		30E3BB05273B5FC600702F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB04273B5FC600702F43 /* AppDelegate.swift */; };
 		30E3BB07273B5FC600702F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB06273B5FC600702F43 /* SceneDelegate.swift */; };
 		30E3BB09273B5FC600702F43 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB08273B5FC600702F43 /* HomeViewController.swift */; };
@@ -39,6 +41,8 @@
 		30A31C58274269FD00589A8F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		30A31C5C2743B18000589A8F /* KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoard.swift; sourceTree = "<group>"; };
 		30A31C602743ECD900589A8F /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
+		30A31C6227453F4100589A8F /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		30A31C6327453F4100589A8F /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		30E3BB01273B5FC600702F43 /* MyTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E3BB04273B5FC600702F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E3BB06273B5FC600702F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,11 +98,13 @@
 			children = (
 				30E3BB04273B5FC600702F43 /* AppDelegate.swift */,
 				30E3BB06273B5FC600702F43 /* SceneDelegate.swift */,
-				30E3BB08273B5FC600702F43 /* HomeViewController.swift */,
-				30E3BB0A273B5FC600702F43 /* Home.storyboard */,
 				30E3BB0D273B5FCE00702F43 /* Assets.xcassets */,
 				30E3BB0F273B5FCE00702F43 /* LaunchScreen.storyboard */,
 				30E3BB12273B5FCE00702F43 /* Info.plist */,
+				30E3BB0A273B5FC600702F43 /* Home.storyboard */,
+				30E3BB08273B5FC600702F43 /* HomeViewController.swift */,
+				30A31C6327453F4100589A8F /* PostTableViewCell.xib */,
+				30A31C6227453F4100589A8F /* PostTableViewCell.swift */,
 				30E3BB18273B6EAE00702F43 /* Profile.storyboard */,
 				30E3BB1A273B6ECD00702F43 /* ProfileViewController.swift */,
 				30E3BB2E273F798F00702F43 /* EditProfile.storyboard */,
@@ -181,6 +187,7 @@
 			files = (
 				30E3BB11273B5FCE00702F43 /* LaunchScreen.storyboard in Resources */,
 				30E3BB0E273B5FCE00702F43 /* Assets.xcassets in Resources */,
+				30A31C6527453F4200589A8F /* PostTableViewCell.xib in Resources */,
 				30E3BB21273B6FD900702F43 /* Login.storyboard in Resources */,
 				30E3BB2D273C9D7400702F43 /* KeepList.storyboard in Resources */,
 				30E3BB27273B74AF00702F43 /* Settings.storyboard in Resources */,
@@ -201,6 +208,7 @@
 			files = (
 				30E3BB23273B6FE900702F43 /* LoginViewController.swift in Sources */,
 				30A31C59274269FD00589A8F /* NavigationController.swift in Sources */,
+				30A31C6427453F4200589A8F /* PostTableViewCell.swift in Sources */,
 				30E3BB09273B5FC600702F43 /* HomeViewController.swift in Sources */,
 				30A31C572742677400589A8F /* TabBarController.swift in Sources */,
 				30E3BB29273B74C200702F43 /* SettingsViewController.swift in Sources */,

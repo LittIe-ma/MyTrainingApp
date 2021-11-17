@@ -8,19 +8,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nzA-v4-gIL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nzA-v4-gIL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9rp-2G-fRR"/>
+                            <constraint firstItem="nzA-v4-gIL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f6p-4q-Wx2"/>
+                            <constraint firstItem="nzA-v4-gIL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s9O-Qy-g8H"/>
+                            <constraint firstItem="nzA-v4-gIL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="v6J-mW-Ua5"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="homekit" catalog="system" id="MUM-3N-5HK"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="MUM-3N-5HK"/>
                     <navigationItem key="navigationItem" id="THn-Xs-QLs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="homePostTableView" destination="nzA-v4-gIL" id="wiG-d8-Fgz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,6 +49,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bYW-b7-g86">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
