@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostViewController: UIViewController {
+class PostViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet private weak var postTextView: PlaceHolderTextView!
     @IBOutlet private weak var profileImageView: UIImageView!
@@ -19,6 +19,7 @@ class PostViewController: UIViewController {
         profileImageView.setCircle()
         setPostButton()
         postTextView.placeHolder = "Training menu"
+        setKeyBoard()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,5 +41,19 @@ class PostViewController: UIViewController {
 
     @objc private func didTapPost() {
         print("button tapped")
+    }
+
+    private func setKeyBoard() {
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
+        toolBar.barStyle = .default
+        toolBar.sizeToFit()
+        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
+        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.didTapDoneKeyBoard))
+        toolBar.items = [spacer, commitButton]
+        postTextView.inputAccessoryView = toolBar
+    }
+
+    @objc private func didTapDoneKeyBoard() {
+        self.view.endEditing(true)
     }
 }

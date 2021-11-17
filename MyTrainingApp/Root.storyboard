@@ -28,9 +28,9 @@
                     <connections>
                         <segue destination="QQA-Rh-Kcx" kind="relationship" relationship="viewControllers" id="Kzx-Mp-hYA"/>
                         <segue destination="ayw-go-PYx" kind="relationship" relationship="viewControllers" id="XSW-Kf-zm1"/>
-                        <segue destination="hfX-8G-ZCG" kind="relationship" relationship="viewControllers" id="tjy-Ip-JT9"/>
-                        <segue destination="XKn-6x-0AD" kind="relationship" relationship="viewControllers" id="Lku-ac-wAm"/>
-                        <segue destination="vYG-MF-uqp" kind="relationship" relationship="viewControllers" id="skk-ol-199"/>
+                        <segue destination="hfX-8G-ZCG" kind="relationship" relationship="viewControllers" id="2kP-0g-xHM"/>
+                        <segue destination="XKn-6x-0AD" kind="relationship" relationship="viewControllers" id="5Is-RT-kT2"/>
+                        <segue destination="vYG-MF-uqp" kind="relationship" relationship="viewControllers" id="L0u-YZ-Atq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BfB-oy-4jA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
