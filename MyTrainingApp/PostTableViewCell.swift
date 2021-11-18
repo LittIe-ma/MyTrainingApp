@@ -9,13 +9,20 @@ import UIKit
 
 final class PostTableViewCell: UITableViewCell {
 
-    static let reuseIdentifier = "PostTableViewCell"
-    @IBOutlet private weak var postPofileImageView: UIImageView!
+    @IBOutlet private weak var postProfileImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var detailLabel: UILabel!
+    @IBOutlet private weak var postedOnLabel: UILabel!
+
+    static var identifier: String { String(describing: self) }
+    static var nib: UINib { UINib(nibName: String(describing: self), bundle: nil)}
 
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
 
-        postPofileImageView.setCircle()
+    func setCell() {
+        postProfileImageView.setCircle()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
