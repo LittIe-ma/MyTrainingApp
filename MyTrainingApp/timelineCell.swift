@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PostTableViewCell: UITableViewCell {
+final class timelineCell: UITableViewCell {
 
     @IBOutlet private weak var postProfileImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!

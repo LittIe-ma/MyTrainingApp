@@ -21,7 +21,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private func setUpTableView() {
         timelineTableView.dataSource = self
         timelineTableView.delegate = self
-        timelineTableView.register(PostTableViewCell.nib, forCellReuseIdentifier: PostTableViewCell.identifier)
+        timelineTableView.register(timelineCell.nib, forCellReuseIdentifier: timelineCell.identifier)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,16 +29,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = timelineTableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
+        let cell = timelineTableView.dequeueReusableCell(withIdentifier: timelineCell.identifier, for: indexPath) as! timelineCell
         cell.setCell()
         return cell
     }
-
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//        timelineTableView.estimatedRowHeight = 150
-//        return UITableView.automaticDimension
-//    }
-
 }
 
