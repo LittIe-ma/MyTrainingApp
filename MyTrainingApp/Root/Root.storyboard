@@ -16,10 +16,10 @@
             </objects>
             <point key="canvasLocation" x="1329" y="-226"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Root Tab Bar Controller-->
         <scene sceneID="uHV-jF-Fxc">
             <objects>
-                <tabBarController id="SYI-lH-9PI" customClass="TabBarController" customModule="MyTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="SYI-lH-9PI" customClass="RootTabBarController" customModule="MyTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g1P-dA-Hfm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

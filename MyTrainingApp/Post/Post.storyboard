@@ -31,7 +31,7 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Dgp-az-ajK">
                                                                 <rect key="frame" x="0.0" y="5" width="50" height="50"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="50" id="9Vv-t0-fZU"/>
+                                                                    <constraint firstAttribute="width" priority="999" constant="50" id="9Vv-t0-fZU"/>
                                                                     <constraint firstAttribute="width" secondItem="Dgp-az-ajK" secondAttribute="height" multiplier="1:1" id="BbA-KW-VD6"/>
                                                                 </constraints>
                                                             </imageView>
@@ -42,7 +42,7 @@
                                                             <constraint firstAttribute="trailing" secondItem="Dgp-az-ajK" secondAttribute="trailing" id="3Bl-RQ-amj"/>
                                                             <constraint firstItem="Dgp-az-ajK" firstAttribute="top" secondItem="zYQ-6L-ijL" secondAttribute="top" constant="5" id="bL8-jz-mGX"/>
                                                             <constraint firstItem="Dgp-az-ajK" firstAttribute="leading" secondItem="zYQ-6L-ijL" secondAttribute="leading" id="xRz-oM-GDN"/>
-                                                            <constraint firstAttribute="width" constant="50" id="zgC-IX-sZB"/>
+                                                            <constraint firstAttribute="width" priority="999" constant="50" id="zgC-IX-sZB"/>
                                                         </constraints>
                                                     </view>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="36z-gg-ghW" customClass="PlaceHolderTextView" customModule="MyTrainingApp" customModuleProvider="target">
