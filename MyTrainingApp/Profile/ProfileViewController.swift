@@ -9,6 +9,11 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    static func makeFromStoryboard() -> ProfileViewController {
+        let viewController = UIStoryboard.profileViewController
+        return viewController
+    }
+
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var heightLabel: UILabel!
     @IBOutlet private weak var weightLabel: UILabel!

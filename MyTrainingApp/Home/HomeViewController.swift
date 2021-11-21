@@ -9,6 +9,11 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    static func makeFromStoryboard() -> HomeViewController {
+        let viewController = UIStoryboard.homeViewController
+        return viewController
+    }
+
     @IBOutlet private weak var timelineTableView: UITableView!
     
     override func viewDidLoad() {

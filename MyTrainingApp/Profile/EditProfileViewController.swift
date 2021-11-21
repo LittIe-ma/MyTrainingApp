@@ -9,6 +9,11 @@ import UIKit
 
 class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
+    static func makeFromStoryboard() -> EditProfileViewController {
+        let viewController = UIStoryboard.editProfileViewController
+        return viewController
+    }
+
     @IBOutlet private weak var nameInputField: UITextField!
     @IBOutlet private weak var heightInputField: UITextField!
     @IBOutlet private weak var weightInputField: UITextField!

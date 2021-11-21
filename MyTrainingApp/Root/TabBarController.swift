@@ -9,6 +9,11 @@ import UIKit
 
 class TabBarController: UITabBarController {
 
+    static func makeFromStoryboard() -> TabBarController {
+        let root = UIStoryboard.tabBarController
+        return root
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
