@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30A31C532740249800589A8F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C522740249700589A8F /* Extension.swift */; };
-		30A31C572742677400589A8F /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C562742677300589A8F /* RootTabBarController.swift */; };
+		30953B40274A615C004889C4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B3F274A615C004889C4 /* Router.swift */; };
+		30953B42274A644F004889C4 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B41274A644F004889C4 /* UIViewController+.swift */; };
+		30953B44274A646A004889C4 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B43274A646A004889C4 /* UITextField+.swift */; };
+		30953B46274A6484004889C4 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B45274A6484004889C4 /* UILabel+.swift */; };
+		30953B48274A649E004889C4 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B47274A649E004889C4 /* UIImageView+.swift */; };
+		30A31C532740249800589A8F /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C522740249700589A8F /* Storyboard+.swift */; };
+		30A31C572742677400589A8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C562742677300589A8F /* TabBarController.swift */; };
 		30A31C59274269FD00589A8F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C58274269FD00589A8F /* NavigationController.swift */; };
 		30A31C5D2743B18000589A8F /* KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C5C2743B18000589A8F /* KeyBoard.swift */; };
 		30A31C612743ECD900589A8F /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C602743ECD900589A8F /* PlaceHolderTextView.swift */; };
@@ -36,8 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		30A31C522740249700589A8F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		30A31C562742677300589A8F /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		30953B3F274A615C004889C4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		30953B41274A644F004889C4 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		30953B43274A646A004889C4 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		30953B45274A6484004889C4 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		30953B47274A649E004889C4 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		30A31C522740249700589A8F /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
+		30A31C562742677300589A8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		30A31C58274269FD00589A8F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		30A31C5C2743B18000589A8F /* KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoard.swift; sourceTree = "<group>"; };
 		30A31C602743ECD900589A8F /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
@@ -77,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30953B3E274A613B004889C4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				30953B3F274A615C004889C4 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		30E3BAF8273B5FC500702F43 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +123,7 @@
 				30E66BFA2748D5C100893647 /* Util */,
 				30E66BF92748D5A500893647 /* Extension */,
 				30E66BF62748D57900893647 /* Login */,
+				30953B3E274A613B004889C4 /* Router */,
 				30E3BB04273B5FC600702F43 /* AppDelegate.swift */,
 				30E3BB06273B5FC600702F43 /* SceneDelegate.swift */,
 				30E3BB0D273B5FCE00702F43 /* Assets.xcassets */,
@@ -176,7 +195,11 @@
 		30E66BF92748D5A500893647 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				30A31C522740249700589A8F /* Extension.swift */,
+				30A31C522740249700589A8F /* Storyboard+.swift */,
+				30953B41274A644F004889C4 /* UIViewController+.swift */,
+				30953B43274A646A004889C4 /* UITextField+.swift */,
+				30953B45274A6484004889C4 /* UILabel+.swift */,
+				30953B47274A649E004889C4 /* UIImageView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -194,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				30E3BB24273B733000702F43 /* Root.storyboard */,
-				30A31C562742677300589A8F /* RootTabBarController.swift */,
+				30A31C562742677300589A8F /* TabBarController.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -282,15 +305,20 @@
 				30A31C59274269FD00589A8F /* NavigationController.swift in Sources */,
 				30A31C6427453F4200589A8F /* timelineCell.swift in Sources */,
 				30E3BB09273B5FC600702F43 /* HomeViewController.swift in Sources */,
-				30A31C572742677400589A8F /* RootTabBarController.swift in Sources */,
+				30953B48274A649E004889C4 /* UIImageView+.swift in Sources */,
+				30A31C572742677400589A8F /* TabBarController.swift in Sources */,
+				30953B46274A6484004889C4 /* UILabel+.swift in Sources */,
 				30E3BB29273B74C200702F43 /* SettingsViewController.swift in Sources */,
+				30953B42274A644F004889C4 /* UIViewController+.swift in Sources */,
 				30E3BB05273B5FC600702F43 /* AppDelegate.swift in Sources */,
 				30E3BB1B273B6ECD00702F43 /* ProfileViewController.swift in Sources */,
-				30A31C532740249800589A8F /* Extension.swift in Sources */,
+				30953B40274A615C004889C4 /* Router.swift in Sources */,
+				30A31C532740249800589A8F /* Storyboard+.swift in Sources */,
 				30E3BB07273B5FC600702F43 /* SceneDelegate.swift in Sources */,
 				30E3BB1D273B6FAB00702F43 /* PostViewController.swift in Sources */,
 				30E3BB2B273C9D6A00702F43 /* KeepListViewController.swift in Sources */,
 				30A31C612743ECD900589A8F /* PlaceHolderTextView.swift in Sources */,
+				30953B44274A646A004889C4 /* UITextField+.swift in Sources */,
 				30E3BB31273F79A100702F43 /* EditProfileViewController.swift in Sources */,
 				30A31C5D2743B18000589A8F /* KeyBoard.swift in Sources */,
 			);

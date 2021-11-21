@@ -1,8 +1,8 @@
 //
-//  StatusBar.swift
+//  UIViewController+.swift
 //  MyTrainingApp
 //
-//  Created by yasudamasato on 2021/11/14.
+//  Created by yasudamasato on 2021/11/21.
 //
 
 import UIKit
@@ -25,31 +25,5 @@ extension UIViewController {
         statusBarView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         statusBarView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         statusBarView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-    }
-}
-
-extension UITextField {
-    func setUnderLine() {
-        let underLine = UIView()
-        underLine.frame = CGRect(x: 0, y: frame.height, width: UIScreen.main.bounds.size.width, height: 2)
-        underLine.backgroundColor = .purple
-        addSubview(underLine)
-        bringSubviewToFront(underLine)
-    }
-}
-
-extension UILabel {
-    func setUnderLine() {
-        let underLine = UIView()
-        underLine.frame = CGRect(x: 0, y: frame.height, width: UIScreen.main.bounds.size.width, height: 2)
-        underLine.backgroundColor = .purple
-        addSubview(underLine)
-        bringSubviewToFront(underLine)
-    }
-}
-
-extension UIImageView {
-    func setCircle() {
-        layer.cornerRadius = self.frame.width / 2
     }
 }
