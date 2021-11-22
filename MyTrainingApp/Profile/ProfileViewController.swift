@@ -10,8 +10,8 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     static func makeFromStoryboard() -> ProfileViewController {
-        let profileView = UIStoryboard.profileViewController
-        return profileView
+        let vc = UIStoryboard.profileViewController
+        return vc
     }
 
     @IBOutlet private weak var nameLabel: UILabel!

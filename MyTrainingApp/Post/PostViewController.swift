@@ -10,8 +10,8 @@ import UIKit
 class PostViewController: UIViewController, UITextFieldDelegate {
 
     static func makeFromStoryboard() -> PostViewController {
-        let postView = UIStoryboard.postViewController
-        return postView
+        let vc = UIStoryboard.postViewController
+        return vc
     }
 
     @IBOutlet private weak var postTextView: PlaceHolderTextView!

@@ -13,27 +13,39 @@ extension UIStoryboard {
     }
 
     static var homeViewController: HomeViewController {
-        UIStoryboard.init(name: "Home", bundle: nil).instantiateInitialViewController() as! HomeViewController
+        let nav = UIStoryboard.init(name: "Home", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        let vc = nav.viewControllers[0] as! HomeViewController
+        return vc
     }
 
     static var keepListViewController: KeepListViewController {
-        UIStoryboard.init(name: "KeepList", bundle: nil).instantiateInitialViewController() as! KeepListViewController
+        let nav = UIStoryboard.init(name: "KeepList", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        let vc = nav.viewControllers[0] as! KeepListViewController
+        return vc
     }
 
     static var postViewController: PostViewController {
-        UIStoryboard.init(name: "Post", bundle: nil).instantiateInitialViewController() as! PostViewController
+        let nav = UIStoryboard.init(name: "Post", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        let vc = nav.viewControllers[0] as! PostViewController
+        return vc
     }
 
     static var profileViewController: ProfileViewController {
-        UIStoryboard.init(name: "Profile", bundle: nil).instantiateInitialViewController() as! ProfileViewController
+        let nav = UIStoryboard.init(name: "Profile", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        let vc = nav.viewControllers[0] as! ProfileViewController
+        return vc
     }
 
     static var editProfileViewController: EditProfileViewController {
-        UIStoryboard.init(name: "EditProfile", bundle: nil).instantiateInitialViewController() as! EditProfileViewController
+        let nav = UIStoryboard.init(name: "EditProfile", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        let vc = nav.viewControllers[0] as! EditProfileViewController
+        return vc
     }
 
     static var settingsViewController: SettingsViewController {
-        UIStoryboard.init(name: "Settings", bundle: nil).instantiateInitialViewController() as! SettingsViewController
+        let nav = UIStoryboard.init(name: "Settings", bundle: nil).instantiateInitialViewController() as! UINavigationController
+        let vc = nav.viewControllers[0] as! SettingsViewController
+        return vc
     }
 }
 

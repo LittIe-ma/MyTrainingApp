@@ -10,8 +10,8 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     static func makeFromStoryboard() -> HomeViewController {
-        let homeView = UIStoryboard.homeViewController
-        return homeView
+        let vc = UIStoryboard.homeViewController
+        return vc
     }
 
     @IBOutlet private weak var timelineTableView: UITableView!

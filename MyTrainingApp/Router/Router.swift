@@ -28,7 +28,11 @@ final class Router {
 }
 
 private extension Router {
-    func show(from: UIViewController, next: UIViewController) {
-        from.present(next, animated: true, completion: nil)
+    func show(from: UIViewController, next: UIViewController, animated: Bool = true) {
+        if let nav = from.navigationController {
+            nav.pushViewController(next, animated: animated)
+        }else {
+            from.present(next, animated: animated, completion: nil)
+        }
     }
 }

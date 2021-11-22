@@ -10,8 +10,8 @@ import UIKit
 class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
     static func makeFromStoryboard() -> EditProfileViewController {
-        let editProfileView = UIStoryboard.editProfileViewController
-        return editProfileView
+        let vc = UIStoryboard.editProfileViewController
+        return vc
     }
 
     @IBOutlet private weak var nameInputField: UITextField!
@@ -31,7 +31,7 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     @IBAction func exitByCancel(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func didTapProfileImageChange(_ sender: Any) {
