@@ -9,7 +9,7 @@ import UIKit
 
 extension UIStoryboard {
     static var tabBarController: TabBarController {
-        UIStoryboard.init(name: "TabBar", bundle: nil).instantiateInitialViewController() as! TabBarController
+        UIStoryboard.init(name: "Root", bundle: nil).instantiateInitialViewController() as! TabBarController
     }
 
     static var homeViewController: HomeViewController {

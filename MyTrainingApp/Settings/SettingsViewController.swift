@@ -10,8 +10,8 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     static func makeFromStoryboard() -> SettingsViewController {
-        let viewController = UIStoryboard.settingsViewController
-        return viewController
+        let settingsView = UIStoryboard.settingsViewController
+        return settingsView
     }
 
     override func viewDidLoad() {

@@ -439,6 +439,7 @@
                     <connections>
                         <outlet property="benchPressLabel" destination="c5u-zP-ATc" id="nYa-9F-lOh"/>
                         <outlet property="deadLiftLabel" destination="MAj-CM-rqK" id="cxS-l1-PhO"/>
+                        <outlet property="editProfileButton" destination="ZQH-O3-dxP" id="M6K-Jx-hJV"/>
                         <outlet property="heightLabel" destination="9Zu-0a-JEz" id="C7k-W6-RSB"/>
                         <outlet property="nameLabel" destination="NA3-4F-u03" id="bcQ-BA-ccO"/>
                         <outlet property="profileImageView" destination="S8m-kQ-iBG" id="Trw-4i-Qo4"/>

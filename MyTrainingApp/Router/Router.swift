@@ -15,6 +15,20 @@ final class Router {
     private var window: UIWindow?
 
     func showRoot(window: UIWindow?) {
-        
+        let viewController = TabBarController.makeFromStoryboard()
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
+        self.window = window
+    }
+
+    func showEditProfile(from: UIViewController) {
+        let viewController = EditProfileViewController.makeFromStoryboard()
+        show(from: from, next: viewController)
+    }
+}
+
+private extension Router {
+    func show(from: UIViewController, next: UIViewController) {
+        from.present(next, animated: true, completion: nil)
     }
 }

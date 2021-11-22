@@ -10,8 +10,8 @@ import UIKit
 class KeepListViewController: UIViewController {
 
     static func makeFromStoryboard() -> KeepListViewController {
-        let viewController = UIStoryboard.keepListViewController
-        return viewController
+        let keepListView = UIStoryboard.keepListViewController
+        return keepListView
     }
 
     override func viewDidLoad() {

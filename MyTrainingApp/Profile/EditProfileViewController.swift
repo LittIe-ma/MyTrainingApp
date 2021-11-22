@@ -10,8 +10,8 @@ import UIKit
 class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
     static func makeFromStoryboard() -> EditProfileViewController {
-        let viewController = UIStoryboard.editProfileViewController
-        return viewController
+        let editProfileView = UIStoryboard.editProfileViewController
+        return editProfileView
     }
 
     @IBOutlet private weak var nameInputField: UITextField!
