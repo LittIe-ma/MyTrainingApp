@@ -27,12 +27,6 @@ class PostViewController: UIViewController, UITextFieldDelegate {
         setKeyBoard()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        postTextView.becomeFirstResponder()
-    }
-
     private func setPostButton() {
         let postButton = UIButton(frame: CGRect(x: 0, y: 0, width: 80, height: 30))
         postButton.backgroundColor = .purple
