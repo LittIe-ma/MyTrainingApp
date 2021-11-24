@@ -31,11 +31,11 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         setStatusBarbackgroundColor(.green)
-        setUpLabel()
+        setupLabel()
         profileImageView.setCircle()
     }
 
-    private func setUpLabel() {
+    private func setupLabel() {
         nameLabel.setUnderLine()
         heightLabel.setUnderLine()
         weightLabel.setUnderLine()

@@ -26,7 +26,7 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
 
         setStatusBarbackgroundColor(.green)
-        setUpTextField()
+        setupTextField()
         editProfileImageView.setCircle()
     }
 
@@ -38,7 +38,7 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
         print("tapped profile image")
     }
 
-    private func setUpTextField() {
+    private func setupTextField() {
         nameInputField.setUnderLine()
         heightInputField.setUnderLine()
         weightInputField.setUnderLine()

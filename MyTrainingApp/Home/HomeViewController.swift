@@ -20,10 +20,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
 
         setStatusBarbackgroundColor(.green)
-        setUpTableView()
+        setupTableView()
     }
 
-    private func setUpTableView() {
+    private func setupTableView() {
         timelineTableView.dataSource = self
         timelineTableView.delegate = self
         timelineTableView.register(timelineCell.nib, forCellReuseIdentifier: timelineCell.identifier)

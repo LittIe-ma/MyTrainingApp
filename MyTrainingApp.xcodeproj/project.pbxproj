@@ -135,8 +135,6 @@
 			children = (
 				30E3BB0A273B5FC600702F43 /* Home.storyboard */,
 				30E3BB08273B5FC600702F43 /* HomeViewController.swift */,
-				30A31C6327453F4100589A8F /* timelineCell.xib */,
-				30A31C6227453F4100589A8F /* timelineCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -204,6 +202,8 @@
 		30E66BFA2748D5C100893647 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				30A31C6327453F4100589A8F /* timelineCell.xib */,
+				30A31C6227453F4100589A8F /* timelineCell.swift */,
 				30A31C58274269FD00589A8F /* NavigationController.swift */,
 				30A31C5C2743B18000589A8F /* KeyBoard.swift */,
 			);

@@ -8,19 +8,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Keep-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="KeepListViewController" customModule="MyTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0SR-LK-Ftb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0SR-LK-Ftb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ReQ-H7-cZZ"/>
+                            <constraint firstItem="0SR-LK-Ftb" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="ZEd-Jb-tqU"/>
+                            <constraint firstItem="0SR-LK-Ftb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gMB-Bu-bFa"/>
+                            <constraint firstItem="0SR-LK-Ftb" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="yne-sU-UsV"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="star" catalog="system" id="00g-zS-s2J"/>
+                    <tabBarItem key="tabBarItem" title="Keep" image="star" catalog="system" id="00g-zS-s2J"/>
                     <navigationItem key="navigationItem" id="H05-Ub-LQT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="keepListTableView" destination="0SR-LK-Ftb" id="bmJ-LJ-b03"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,6 +49,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nqz-oe-rzE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
