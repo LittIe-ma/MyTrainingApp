@@ -53,7 +53,7 @@
                                                                     <constraint firstAttribute="width" constant="10" id="cdn-fX-IoT"/>
                                                                 </constraints>
                                                             </view>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYb-dx-U15" customClass="DoneTextField" customModule="MyTrainingApp" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYb-dx-U15">
                                                                 <rect key="frame" x="120" y="0.0" width="264" height="100"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -110,7 +110,7 @@
                                                                             <constraint firstAttribute="width" constant="30" id="bFv-RX-f9i"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7dD-UD-cOj" customClass="DoneTextField" customModule="MyTrainingApp" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7dD-UD-cOj">
                                                                         <rect key="frame" x="110" y="0.0" width="224" height="80"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -155,7 +155,7 @@
                                                                             <constraint firstAttribute="width" constant="30" id="i6L-0w-y1E"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B40-fv-J72" customClass="DoneTextField" customModule="MyTrainingApp" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Weight" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B40-fv-J72">
                                                                         <rect key="frame" x="110" y="0.0" width="224" height="80"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -222,7 +222,7 @@
                                                                             <constraint firstAttribute="width" constant="10" id="kPi-rY-7xh"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bench press " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSh-wO-Q5q" customClass="DoneTextField" customModule="MyTrainingApp" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bench press " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSh-wO-Q5q">
                                                                         <rect key="frame" x="110" y="0.0" width="224" height="80"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -267,7 +267,7 @@
                                                                             <constraint firstAttribute="width" constant="10" id="23p-je-AZb"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Squat" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OyB-Tx-7O4" customClass="DoneTextField" customModule="MyTrainingApp" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Squat" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OyB-Tx-7O4">
                                                                         <rect key="frame" x="110" y="0.0" width="224" height="80"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -312,7 +312,7 @@
                                                                             <constraint firstAttribute="width" constant="10" id="Ck1-YD-8lU"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Dead lift" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D0h-Hy-jKR" customClass="DoneTextField" customModule="MyTrainingApp" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Dead lift" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D0h-Hy-jKR">
                                                                         <rect key="frame" x="110" y="0.0" width="224" height="80"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -415,7 +415,6 @@
         <!--Navigation Controller-->
         <scene sceneID="5TA-jR-por">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g9F-i0-yfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="4hM-Xb-J4Q" customClass="NavigationController" customModule="MyTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cP6-77-Tx7">
@@ -428,6 +427,7 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="aGm-Pz-nqe"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9F-i0-yfL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1839.1304347826087" y="93.75"/>
         </scene>

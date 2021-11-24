@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3002A5DE274E6C2D00D8E3C9 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3002A5DD274E6C2D00D8E3C9 /* IQKeyboardManagerSwift */; };
 		30953B40274A615C004889C4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B3F274A615C004889C4 /* Router.swift */; };
 		30953B42274A644F004889C4 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B41274A644F004889C4 /* UIViewController+.swift */; };
 		30953B44274A646A004889C4 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B43274A646A004889C4 /* UITextField+.swift */; };
@@ -15,7 +16,6 @@
 		30A31C532740249800589A8F /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C522740249700589A8F /* Storyboard+.swift */; };
 		30A31C572742677400589A8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C562742677300589A8F /* TabBarController.swift */; };
 		30A31C59274269FD00589A8F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C58274269FD00589A8F /* NavigationController.swift */; };
-		30A31C5D2743B18000589A8F /* KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C5C2743B18000589A8F /* KeyBoard.swift */; };
 		30A31C612743ECD900589A8F /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C602743ECD900589A8F /* PlaceHolderTextView.swift */; };
 		30A31C6427453F4200589A8F /* timelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C6227453F4100589A8F /* timelineCell.swift */; };
 		30A31C6527453F4200589A8F /* timelineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A31C6327453F4100589A8F /* timelineCell.xib */; };
@@ -48,7 +48,6 @@
 		30A31C522740249700589A8F /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		30A31C562742677300589A8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		30A31C58274269FD00589A8F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		30A31C5C2743B18000589A8F /* KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoard.swift; sourceTree = "<group>"; };
 		30A31C602743ECD900589A8F /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		30A31C6227453F4100589A8F /* timelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timelineCell.swift; sourceTree = "<group>"; };
 		30A31C6327453F4100589A8F /* timelineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = timelineCell.xib; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3002A5DE274E6C2D00D8E3C9 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,9 +118,9 @@
 				30E66BF52748D56E00893647 /* Post */,
 				30E66BF42748D55E00893647 /* Profile */,
 				30E66BF72748D58300893647 /* Settings */,
+				30E66BF62748D57900893647 /* Login */,
 				30E66BFA2748D5C100893647 /* Util */,
 				30E66BF92748D5A500893647 /* Extension */,
-				30E66BF62748D57900893647 /* Login */,
 				30953B3E274A613B004889C4 /* Router */,
 				30E3BB04273B5FC600702F43 /* AppDelegate.swift */,
 				30E3BB0D273B5FCE00702F43 /* Assets.xcassets */,
@@ -205,7 +205,6 @@
 				30A31C6327453F4100589A8F /* timelineCell.xib */,
 				30A31C6227453F4100589A8F /* timelineCell.swift */,
 				30A31C58274269FD00589A8F /* NavigationController.swift */,
-				30A31C5C2743B18000589A8F /* KeyBoard.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -235,6 +234,9 @@
 			dependencies = (
 			);
 			name = MyTrainingApp;
+			packageProductDependencies = (
+				3002A5DD274E6C2D00D8E3C9 /* IQKeyboardManagerSwift */,
+			);
 			productName = MyTrainingApp;
 			productReference = 30E3BB01273B5FC600702F43 /* MyTrainingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -263,6 +265,9 @@
 				Base,
 			);
 			mainGroup = 30E3BAF8273B5FC500702F43;
+			packageReferences = (
+				3002A5DC274E6C2D00D8E3C9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 30E3BB02273B5FC600702F43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -316,7 +321,6 @@
 				30A31C612743ECD900589A8F /* PlaceHolderTextView.swift in Sources */,
 				30953B44274A646A004889C4 /* UITextField+.swift in Sources */,
 				30E3BB31273F79A100702F43 /* EditProfileViewController.swift in Sources */,
-				30A31C5D2743B18000589A8F /* KeyBoard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +540,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3002A5DC274E6C2D00D8E3C9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3002A5DD274E6C2D00D8E3C9 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3002A5DC274E6C2D00D8E3C9 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30E3BAF9273B5FC500702F43 /* Project object */;
 }
