@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3002A5DE274E6C2D00D8E3C9 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3002A5DD274E6C2D00D8E3C9 /* IQKeyboardManagerSwift */; };
+		3002A5E2274E742500D8E3C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002A5E1274E742400D8E3C9 /* SignUpViewController.swift */; };
+		3002A5E4274E743B00D8E3C9 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3002A5E3274E743B00D8E3C9 /* SignUp.storyboard */; };
 		30953B40274A615C004889C4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B3F274A615C004889C4 /* Router.swift */; };
 		30953B42274A644F004889C4 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B41274A644F004889C4 /* UIViewController+.swift */; };
 		30953B44274A646A004889C4 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B43274A646A004889C4 /* UITextField+.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3002A5E1274E742400D8E3C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3002A5E3274E743B00D8E3C9 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		30953B3F274A615C004889C4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		30953B41274A644F004889C4 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		30953B43274A646A004889C4 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
@@ -85,6 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3002A5DF274E73BE00D8E3C9 /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				30E3BB2E273F798F00702F43 /* EditProfile.storyboard */,
+				30E3BB30273F79A100702F43 /* EditProfileViewController.swift */,
+			);
+			path = EditProfile;
+			sourceTree = "<group>";
+		};
+		3002A5E0274E73E900D8E3C9 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				3002A5E3274E743B00D8E3C9 /* SignUp.storyboard */,
+				3002A5E1274E742400D8E3C9 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		30953B3E274A613B004889C4 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,9 +139,11 @@
 				30E66BF82748D58F00893647 /* KeepList */,
 				30E66BF52748D56E00893647 /* Post */,
 				30E66BF42748D55E00893647 /* Profile */,
+				3002A5DF274E73BE00D8E3C9 /* EditProfile */,
 				30E66BF72748D58300893647 /* Settings */,
 				30E66BF62748D57900893647 /* Login */,
-				30E66BFA2748D5C100893647 /* Util */,
+				3002A5E0274E73E900D8E3C9 /* SignUp */,
+				30E66BFA2748D5C100893647 /* Utils */,
 				30E66BF92748D5A500893647 /* Extension */,
 				30953B3E274A613B004889C4 /* Router */,
 				30E3BB04273B5FC600702F43 /* AppDelegate.swift */,
@@ -144,8 +168,6 @@
 			children = (
 				30E3BB18273B6EAE00702F43 /* Profile.storyboard */,
 				30E3BB1A273B6ECD00702F43 /* ProfileViewController.swift */,
-				30E3BB2E273F798F00702F43 /* EditProfile.storyboard */,
-				30E3BB30273F79A100702F43 /* EditProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -199,14 +221,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		30E66BFA2748D5C100893647 /* Util */ = {
+		30E66BFA2748D5C100893647 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				30A31C6327453F4100589A8F /* timelineCell.xib */,
 				30A31C6227453F4100589A8F /* timelineCell.swift */,
 				30A31C58274269FD00589A8F /* NavigationController.swift */,
 			);
-			path = Util;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		30E66BFB2748D70400893647 /* Root */ = {
@@ -284,6 +306,7 @@
 			files = (
 				30E3BB11273B5FCE00702F43 /* LaunchScreen.storyboard in Resources */,
 				30E3BB0E273B5FCE00702F43 /* Assets.xcassets in Resources */,
+				3002A5E4274E743B00D8E3C9 /* SignUp.storyboard in Resources */,
 				30A31C6527453F4200589A8F /* timelineCell.xib in Resources */,
 				30E3BB21273B6FD900702F43 /* Login.storyboard in Resources */,
 				30E3BB2D273C9D7400702F43 /* KeepList.storyboard in Resources */,
@@ -310,6 +333,7 @@
 				30953B48274A649E004889C4 /* UIImageView+.swift in Sources */,
 				30A31C572742677400589A8F /* TabBarController.swift in Sources */,
 				30953B46274A6484004889C4 /* UILabel+.swift in Sources */,
+				3002A5E2274E742500D8E3C9 /* SignUpViewController.swift in Sources */,
 				30E3BB29273B74C200702F43 /* SettingsViewController.swift in Sources */,
 				30953B42274A644F004889C4 /* UIViewController+.swift in Sources */,
 				30E3BB05273B5FC600702F43 /* AppDelegate.swift in Sources */,
