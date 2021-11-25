@@ -11,8 +11,8 @@ import UITextView_Placeholder
 class PostViewController: UIViewController, UITextFieldDelegate {
 
     static func makeFromStoryboard() -> PostViewController {
-        let vc = UIStoryboard.postViewController
-        return vc
+        let postVC = UIStoryboard.postViewController
+        return postVC
     }
 
     @IBOutlet private weak var postTextView: UITextView!

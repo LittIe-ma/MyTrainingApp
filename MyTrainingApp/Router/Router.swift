@@ -31,7 +31,7 @@ private extension Router {
     func show(from: UIViewController, next: UIViewController, animated: Bool = true) {
         if let nav = from.navigationController {
             nav.pushViewController(next, animated: animated)
-        }else {
+        } else {
             from.present(next, animated: animated, completion: nil)
         }
     }

@@ -21,4 +21,3 @@ class TabBarController: UITabBarController {
         UITabBar.appearance().barTintColor = .green
     }
 }
-

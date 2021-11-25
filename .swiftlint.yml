@@ -1,0 +1,11 @@
+disabled_rules:
+- trailing_whitespace # コードの記載のない改行を許可したい
+- force_cast # force_cast は場合によっては使用するため
+
+
+excluded:
+- Pods
+
+line_length:
+  warning: 300
+  error: 500

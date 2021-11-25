@@ -10,8 +10,8 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     static func makeFromStoryboard() -> ProfileViewController {
-        let vc = UIStoryboard.profileViewController
-        return vc
+        let profileVC = UIStoryboard.profileViewController
+        return profileVC
     }
 
     @IBOutlet private weak var nameLabel: UILabel!
@@ -48,4 +48,3 @@ class ProfileViewController: UIViewController {
         Router.shared.showEditProfile(from: self)
     }
 }
-

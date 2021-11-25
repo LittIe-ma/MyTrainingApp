@@ -10,8 +10,8 @@ import UIKit
 class KeepListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     static func makeFromStoryboard() -> KeepListViewController {
-        let vc = UIStoryboard.keepListViewController
-        return vc
+        let keepListVC = UIStoryboard.keepListViewController
+        return keepListVC
     }
 
     @IBOutlet private weak var keepListTableView: UITableView!
@@ -26,7 +26,7 @@ class KeepListViewController: UIViewController, UITableViewDelegate, UITableView
     private func setupTableView() {
         keepListTableView.dataSource = self
         keepListTableView.delegate = self
-        keepListTableView.register(timelineCell.nib, forCellReuseIdentifier: timelineCell.identifier)
+        keepListTableView.register(TimelineCell.nib, forCellReuseIdentifier: TimelineCell.identifier)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,7 +34,7 @@ class KeepListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = keepListTableView.dequeueReusableCell(withIdentifier: timelineCell.identifier, for: indexPath) as! timelineCell
+        let cell = keepListTableView.dequeueReusableCell(withIdentifier: TimelineCell.identifier, for: indexPath) as! TimelineCell
         cell.setCell()
         return cell
     }

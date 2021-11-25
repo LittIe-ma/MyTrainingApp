@@ -8,4 +8,5 @@ target 'MyTrainingApp' do
 
   # Pods for MyTrainingApp
   pod 'UITextView+Placeholder'
+  pod 'SwiftLint'
 end

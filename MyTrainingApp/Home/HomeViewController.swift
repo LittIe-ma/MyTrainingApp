@@ -10,8 +10,8 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     static func makeFromStoryboard() -> HomeViewController {
-        let vc = UIStoryboard.homeViewController
-        return vc
+        let homeVC = UIStoryboard.homeViewController
+        return homeVC
     }
 
     @IBOutlet private weak var timelineTableView: UITableView!
@@ -26,7 +26,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private func setupTableView() {
         timelineTableView.dataSource = self
         timelineTableView.delegate = self
-        timelineTableView.register(timelineCell.nib, forCellReuseIdentifier: timelineCell.identifier)
+        timelineTableView.register(TimelineCell.nib, forCellReuseIdentifier: TimelineCell.identifier)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,9 +34,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = timelineTableView.dequeueReusableCell(withIdentifier: timelineCell.identifier, for: indexPath) as! timelineCell
+        let cell = timelineTableView.dequeueReusableCell(withIdentifier: TimelineCell.identifier, for: indexPath) as! TimelineCell
         cell.setCell()
         return cell
     }
 }
-

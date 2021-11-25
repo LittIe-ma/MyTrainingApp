@@ -10,8 +10,8 @@ import UIKit
 class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
     static func makeFromStoryboard() -> EditProfileViewController {
-        let vc = UIStoryboard.editProfileViewController
-        return vc
+        let editProfileVC = UIStoryboard.editProfileViewController
+        return editProfileVC
     }
 
     @IBOutlet private weak var nameInputField: UITextField!
@@ -47,4 +47,3 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
         deadLiftInputField.setUnderLine()
     }
 }
-

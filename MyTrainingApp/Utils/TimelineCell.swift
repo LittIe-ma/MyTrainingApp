@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class timelineCell: UITableViewCell {
+final class TimelineCell: UITableViewCell {
 
     @IBOutlet private weak var postProfileImageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
@@ -30,5 +30,4 @@ final class timelineCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
