@@ -18,7 +18,6 @@
 		30A31C532740249800589A8F /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C522740249700589A8F /* Storyboard+.swift */; };
 		30A31C572742677400589A8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C562742677300589A8F /* TabBarController.swift */; };
 		30A31C59274269FD00589A8F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C58274269FD00589A8F /* NavigationController.swift */; };
-		30A31C612743ECD900589A8F /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C602743ECD900589A8F /* PlaceHolderTextView.swift */; };
 		30A31C6427453F4200589A8F /* timelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C6227453F4100589A8F /* timelineCell.swift */; };
 		30A31C6527453F4200589A8F /* timelineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A31C6327453F4100589A8F /* timelineCell.xib */; };
 		30E3BB05273B5FC600702F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB04273B5FC600702F43 /* AppDelegate.swift */; };
@@ -39,6 +38,7 @@
 		30E3BB2D273C9D7400702F43 /* KeepList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3BB2C273C9D7400702F43 /* KeepList.storyboard */; };
 		30E3BB2F273F798F00702F43 /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3BB2E273F798F00702F43 /* EditProfile.storyboard */; };
 		30E3BB31273F79A100702F43 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB30273F79A100702F43 /* EditProfileViewController.swift */; };
+		C2CCF48509D333A34C86B6FD /* Pods_MyTrainingApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AAFAE9FD3ADDEF0F2148749 /* Pods_MyTrainingApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +52,6 @@
 		30A31C522740249700589A8F /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		30A31C562742677300589A8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		30A31C58274269FD00589A8F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
-		30A31C602743ECD900589A8F /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		30A31C6227453F4100589A8F /* timelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timelineCell.swift; sourceTree = "<group>"; };
 		30A31C6327453F4100589A8F /* timelineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = timelineCell.xib; sourceTree = "<group>"; };
 		30E3BB01273B5FC600702F43 /* MyTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +74,9 @@
 		30E3BB2C273C9D7400702F43 /* KeepList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KeepList.storyboard; sourceTree = "<group>"; };
 		30E3BB2E273F798F00702F43 /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		30E3BB30273F79A100702F43 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		4A57403BA2F9B45E4E8F62A5 /* Pods-MyTrainingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrainingApp.debug.xcconfig"; path = "Target Support Files/Pods-MyTrainingApp/Pods-MyTrainingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4AAFAE9FD3ADDEF0F2148749 /* Pods_MyTrainingApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTrainingApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F8CEE1F21045466A7E4382D /* Pods-MyTrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTrainingApp.release.xcconfig"; path = "Target Support Files/Pods-MyTrainingApp/Pods-MyTrainingApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3002A5DE274E6C2D00D8E3C9 /* IQKeyboardManagerSwift in Frameworks */,
+				C2CCF48509D333A34C86B6FD /* Pods_MyTrainingApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +123,8 @@
 			children = (
 				30E3BB03273B5FC600702F43 /* MyTrainingApp */,
 				30E3BB02273B5FC600702F43 /* Products */,
+				41E92D97D6C01F503C79758E /* Pods */,
+				53EF0F3D6791FAB1FE7ED76B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,7 +182,6 @@
 			children = (
 				30E3BB1E273B6FBF00702F43 /* Post.storyboard */,
 				30E3BB1C273B6FAB00702F43 /* PostViewController.swift */,
-				30A31C602743ECD900589A8F /* PlaceHolderTextView.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -240,6 +244,23 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
+		41E92D97D6C01F503C79758E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A57403BA2F9B45E4E8F62A5 /* Pods-MyTrainingApp.debug.xcconfig */,
+				6F8CEE1F21045466A7E4382D /* Pods-MyTrainingApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		53EF0F3D6791FAB1FE7ED76B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AAFAE9FD3ADDEF0F2148749 /* Pods_MyTrainingApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,9 +268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30E3BB15273B5FCE00702F43 /* Build configuration list for PBXNativeTarget "MyTrainingApp" */;
 			buildPhases = (
+				31A514A510BC1CD430E6453F /* [CP] Check Pods Manifest.lock */,
 				30E3BAFD273B5FC600702F43 /* Sources */,
 				30E3BAFE273B5FC600702F43 /* Frameworks */,
 				30E3BAFF273B5FC600702F43 /* Resources */,
+				124B1D0023A2507A9E8BFB25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,6 +344,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		124B1D0023A2507A9E8BFB25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTrainingApp/Pods-MyTrainingApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyTrainingApp/Pods-MyTrainingApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyTrainingApp/Pods-MyTrainingApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31A514A510BC1CD430E6453F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTrainingApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		30E3BAFD273B5FC600702F43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -342,7 +407,6 @@
 				30A31C532740249800589A8F /* Storyboard+.swift in Sources */,
 				30E3BB1D273B6FAB00702F43 /* PostViewController.swift in Sources */,
 				30E3BB2B273C9D6A00702F43 /* KeepListViewController.swift in Sources */,
-				30A31C612743ECD900589A8F /* PlaceHolderTextView.swift in Sources */,
 				30953B44274A646A004889C4 /* UITextField+.swift in Sources */,
 				30E3BB31273F79A100702F43 /* EditProfileViewController.swift in Sources */,
 			);
@@ -488,6 +552,7 @@
 		};
 		30E3BB16273B5FCE00702F43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A57403BA2F9B45E4E8F62A5 /* Pods-MyTrainingApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,6 +581,7 @@
 		};
 		30E3BB17273B5FCE00702F43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F8CEE1F21045466A7E4382D /* Pods-MyTrainingApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

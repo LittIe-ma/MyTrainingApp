@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UITextView_Placeholder
 
 class PostViewController: UIViewController, UITextFieldDelegate {
 
@@ -14,7 +15,7 @@ class PostViewController: UIViewController, UITextFieldDelegate {
         return vc
     }
 
-    @IBOutlet private weak var postTextView: PlaceHolderTextView!
+    @IBOutlet private weak var postTextView: UITextView!
     @IBOutlet private weak var profileImageView: UIImageView!
 
     override func viewDidLoad() {
@@ -23,8 +24,8 @@ class PostViewController: UIViewController, UITextFieldDelegate {
         setStatusBarbackgroundColor(.green)
         profileImageView.setCircle()
         setPostButton()
-        postTextView.placeHolder = "Training menu"
         setKeyBoard()
+        setPlaceholder()
     }
 
     private func setPostButton() {
@@ -50,6 +51,11 @@ class PostViewController: UIViewController, UITextFieldDelegate {
         let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.didTapDoneKeyBoard))
         toolBar.items = [spacer, commitButton]
         postTextView.inputAccessoryView = toolBar
+    }
+
+    private func setPlaceholder() {
+        postTextView.placeholder = "Training menu"
+        postTextView.placeholderColor = .gray
     }
 
     @objc private func didTapDoneKeyBoard() {

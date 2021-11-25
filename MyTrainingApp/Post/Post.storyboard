@@ -45,7 +45,7 @@
                                                             <constraint firstAttribute="width" priority="999" constant="50" id="zgC-IX-sZB"/>
                                                         </constraints>
                                                     </view>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="36z-gg-ghW" customClass="PlaceHolderTextView" customModule="MyTrainingApp" customModuleProvider="target">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="36z-gg-ghW">
                                                         <rect key="frame" x="50" y="0.0" width="344" height="705"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <color key="textColor" systemColor="labelColor"/>
