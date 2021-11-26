@@ -30,7 +30,7 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     @IBAction func exitByCancel(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        Router.shared.backProfile(from: self)
     }
 
     @IBAction func didTapProfileImageChange(_ sender: Any) {

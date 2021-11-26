@@ -20,11 +20,30 @@ final class Router {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         self.window = window
+//        let vccController = LoginViewController.makeFromStoryboard()
+//        window?.rootViewController = viewController
+//        window?.makeKeyAndVisible()
+//        self.window = window
     }
 
     func showEditProfile(from: UIViewController) {
         let viewController = EditProfileViewController.makeFromStoryboard()
         show(from: from, next: viewController)
+    }
+
+    func showSignUp(from: UIViewController) {
+        let viewController = SignUpViewController.makeFromStoryboard()
+        show(from: from, next: viewController)
+    }
+
+    func backProfile(from: UIViewController) {
+        let viewController = ProfileViewController.makeFromStoryboard()
+        back(from: from, next: viewController)
+    }
+
+    func backLogin(from: UIViewController) {
+        let viewController = LoginViewController.makeFromStoryboard()
+        back(from: from, next: viewController)
     }
 }
 
@@ -34,6 +53,14 @@ private extension Router {
             navigationController.pushViewController(next, animated: animated)
         } else {
             from.present(next, animated: animated, completion: nil)
+        }
+    }
+
+    func back(from: UIViewController, next: UIViewController, animated: Bool = true) {
+        if let navigationController = from.navigationController {
+            navigationController.popViewController(animated: animated)
+        } else {
+            from.dismiss(animated: animated, completion: nil)
         }
     }
 }
