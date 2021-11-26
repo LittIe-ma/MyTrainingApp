@@ -17,7 +17,6 @@
 		30953B48274A649E004889C4 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B47274A649E004889C4 /* UIImageView+.swift */; };
 		30A31C532740249800589A8F /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C522740249700589A8F /* Storyboard+.swift */; };
 		30A31C572742677400589A8F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C562742677300589A8F /* TabBarController.swift */; };
-		30A31C59274269FD00589A8F /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C58274269FD00589A8F /* NavigationController.swift */; };
 		30A31C6427453F4200589A8F /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A31C6227453F4100589A8F /* TimelineCell.swift */; };
 		30A31C6527453F4200589A8F /* TimelineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30A31C6327453F4100589A8F /* TimelineCell.xib */; };
 		30E3BB05273B5FC600702F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3BB04273B5FC600702F43 /* AppDelegate.swift */; };
@@ -51,7 +50,6 @@
 		30953B47274A649E004889C4 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		30A31C522740249700589A8F /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		30A31C562742677300589A8F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		30A31C58274269FD00589A8F /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		30A31C6227453F4100589A8F /* TimelineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		30A31C6327453F4100589A8F /* TimelineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineCell.xib; sourceTree = "<group>"; };
 		30E3BB01273B5FC600702F43 /* MyTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,7 +228,6 @@
 			children = (
 				30A31C6327453F4100589A8F /* TimelineCell.xib */,
 				30A31C6227453F4100589A8F /* TimelineCell.swift */,
-				30A31C58274269FD00589A8F /* NavigationController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -410,7 +407,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E3BB23273B6FE900702F43 /* LoginViewController.swift in Sources */,
-				30A31C59274269FD00589A8F /* NavigationController.swift in Sources */,
 				30A31C6427453F4200589A8F /* TimelineCell.swift in Sources */,
 				30E3BB09273B5FC600702F43 /* HomeViewController.swift in Sources */,
 				30953B48274A649E004889C4 /* UIImageView+.swift in Sources */,

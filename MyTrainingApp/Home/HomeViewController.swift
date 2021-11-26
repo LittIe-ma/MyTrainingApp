@@ -19,7 +19,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setStatusBarbackgroundColor(.green)
         setupTableView()
     }
 

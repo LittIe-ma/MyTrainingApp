@@ -25,7 +25,6 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setStatusBarbackgroundColor(.green)
         setupTextField()
         editProfileImageView.setCircle()
     }

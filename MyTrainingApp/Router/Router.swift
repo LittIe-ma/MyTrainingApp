@@ -16,7 +16,8 @@ final class Router {
 
     func showRoot(window: UIWindow?) {
         let viewController = TabBarController.makeFromStoryboard()
-        window?.rootViewController = viewController
+        let navigationController = UINavigationController(rootViewController: viewController)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         self.window = window
     }
@@ -29,8 +30,8 @@ final class Router {
 
 private extension Router {
     func show(from: UIViewController, next: UIViewController, animated: Bool = true) {
-        if let nav = from.navigationController {
-            nav.pushViewController(next, animated: animated)
+        if let navigationController = from.navigationController {
+            navigationController.pushViewController(next, animated: animated)
         } else {
             from.present(next, animated: animated, completion: nil)
         }

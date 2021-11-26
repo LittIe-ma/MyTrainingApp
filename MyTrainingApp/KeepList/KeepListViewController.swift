@@ -19,7 +19,6 @@ class KeepListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setStatusBarbackgroundColor(.green)
         setupTableView()
     }
 

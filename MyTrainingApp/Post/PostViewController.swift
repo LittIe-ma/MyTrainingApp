@@ -21,7 +21,6 @@ class PostViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setStatusBarbackgroundColor(.green)
         profileImageView.setCircle()
         setPostButton()
         setKeyBoard()
