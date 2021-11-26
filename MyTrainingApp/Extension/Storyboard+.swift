@@ -35,4 +35,12 @@ extension UIStoryboard {
     static var settingsViewController: SettingsViewController {
         UIStoryboard.init(name: "Settings", bundle: nil).instantiateInitialViewController() as! SettingsViewController
     }
+
+    static var signUpViewController: SignUpViewController {
+        UIStoryboard.init(name: "SignUp", bundle: nil).instantiateInitialViewController() as! SignUpViewController
+    }
+
+    static var loginViewController: LoginViewController {
+        UIStoryboard.init(name: "Login", bundle: nil).instantiateInitialViewController() as! LoginViewController
+    }
 }

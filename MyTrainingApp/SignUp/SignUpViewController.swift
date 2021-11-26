@@ -9,6 +9,11 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    static func makeFromStoryboard() -> SignUpViewController {
+        let signUpVC = UIStoryboard.signUpViewController
+        return signUpVC
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
