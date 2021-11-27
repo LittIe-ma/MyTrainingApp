@@ -15,15 +15,15 @@ final class Router {
     private var window: UIWindow?
 
     func showRoot(window: UIWindow?) {
-        let viewController = TabBarController.makeFromStoryboard()
-        let navigationController = UINavigationController(rootViewController: viewController)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-        self.window = window
-//        let vccController = LoginViewController.makeFromStoryboard()
-//        window?.rootViewController = viewController
+//        let viewController = TabBarController.makeFromStoryboard()
+//        let navigationController = UINavigationController(rootViewController: viewController)
+//        window?.rootViewController = navigationController
 //        window?.makeKeyAndVisible()
 //        self.window = window
+        let viewController = LoginViewController.makeFromStoryboard()
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
+        self.window = window
     }
 
     func showEditProfile(from: UIViewController) {
@@ -44,6 +44,10 @@ final class Router {
     func backLogin(from: UIViewController) {
         let viewController = LoginViewController.makeFromStoryboard()
         back(from: from, next: viewController)
+    }
+
+    func showReStart() {
+        showRoot(window: window)
     }
 }
 
