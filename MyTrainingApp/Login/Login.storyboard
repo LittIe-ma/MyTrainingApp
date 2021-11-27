@@ -49,7 +49,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PassWord" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y6d-02-rjT">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y6d-02-rjT">
                                                         <rect key="frame" x="0.0" y="150" width="394" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="70" id="Oe4-dX-zNc"/>
@@ -165,7 +165,7 @@
                     <connections>
                         <outlet property="emailField" destination="xRF-XT-0Vc" id="ReJ-Z2-J1T"/>
                         <outlet property="loginButton" destination="nep-aI-tS3" id="2JC-St-Jos"/>
-                        <outlet property="passWordField" destination="y6d-02-rjT" id="vmT-2x-2Hr"/>
+                        <outlet property="passwordField" destination="y6d-02-rjT" id="sb0-Om-zwU"/>
                         <outlet property="signUpButton" destination="wxM-nV-NSn" id="lGA-J4-Hf1"/>
                     </connections>
                 </viewController>

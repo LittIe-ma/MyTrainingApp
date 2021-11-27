@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 final class Router {
 
@@ -15,15 +16,18 @@ final class Router {
     private var window: UIWindow?
 
     func showRoot(window: UIWindow?) {
-//        let viewController = TabBarController.makeFromStoryboard()
-//        let navigationController = UINavigationController(rootViewController: viewController)
-//        window?.rootViewController = navigationController
-//        window?.makeKeyAndVisible()
-//        self.window = window
-        let viewController = LoginViewController.makeFromStoryboard()
-        window?.rootViewController = viewController
-        window?.makeKeyAndVisible()
-        self.window = window
+        if Auth.auth().currentUser?.uid != nil {
+            let viewController = TabBarController.makeFromStoryboard()
+            let navigationController = UINavigationController(rootViewController: viewController)
+            window?.rootViewController = navigationController
+            window?.makeKeyAndVisible()
+            self.window = window
+        } else {
+            let viewController = LoginViewController.makeFromStoryboard()
+            window?.rootViewController = viewController
+            window?.makeKeyAndVisible()
+            self.window = window
+        }
     }
 
     func showEditProfile(from: UIViewController) {

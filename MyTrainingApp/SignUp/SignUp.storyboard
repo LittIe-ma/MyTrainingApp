@@ -49,7 +49,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PassWord" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s4e-Jy-7KN">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s4e-Jy-7KN">
                                                         <rect key="frame" x="0.0" y="150" width="394" height="70"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="70" id="yjJ-25-gna"/>
@@ -173,7 +173,7 @@
                     <connections>
                         <outlet property="emailField" destination="HCx-IM-Q7n" id="YlQ-Na-hfo"/>
                         <outlet property="loginButton" destination="N97-gU-7f6" id="idi-rc-qVY"/>
-                        <outlet property="passWordField" destination="s4e-Jy-7KN" id="sh9-EO-tcC"/>
+                        <outlet property="passwordField" destination="s4e-Jy-7KN" id="WwH-Tp-SJ6"/>
                         <outlet property="signUpButton" destination="w6g-iY-d3K" id="x9B-eV-Ld0"/>
                         <outlet property="userNameField" destination="CAp-nC-di0" id="ncc-Ei-EMb"/>
                     </connections>
