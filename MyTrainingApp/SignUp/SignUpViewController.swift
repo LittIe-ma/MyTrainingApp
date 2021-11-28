@@ -55,7 +55,7 @@ class SignUpViewController: UIViewController {
                             self.present(dialog, animated: true, completion: nil)
                         } else {
                             print("ユーザー作成完了 name:" + name)
-                            Router.shared.showReStart()
+                            Router.shared.backLogin(from: self)
                         }
                     })
                 } else if let error = error {
