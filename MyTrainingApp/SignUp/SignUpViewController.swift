@@ -50,7 +50,7 @@ class SignUpViewController: UIViewController {
                     ], completion: { error in
                         if let error = error {
                             print("Firestore 新規登録失敗 " + error.localizedDescription)
-                            let dialog = UIAlertController(title: "新規登録失敗", message: error.localizedDescription, preferredStyle: .alert)
+                            let dialog = UIAlertController(title: "Registration Failure", message: error.localizedDescription, preferredStyle: .alert)
                             dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                             self.present(dialog, animated: true, completion: nil)
                         } else {
@@ -60,7 +60,7 @@ class SignUpViewController: UIViewController {
                     })
                 } else if let error = error {
                     print("Firebase Auth 新規登録失敗 " + error.localizedDescription)
-                    let dialog = UIAlertController(title: "新規登録失敗", message: error.localizedDescription, preferredStyle: .alert)
+                    let dialog = UIAlertController(title: "Registration Failure", message: error.localizedDescription, preferredStyle: .alert)
                     dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(dialog, animated: true, completion: nil)
                 }
