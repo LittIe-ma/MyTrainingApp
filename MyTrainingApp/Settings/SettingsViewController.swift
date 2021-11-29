@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsViewController: UIViewController {
 
@@ -30,6 +31,17 @@ class SettingsViewController: UIViewController {
     }
 
     @objc private func didTapLogout(_ sender: Any) {
-
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+                print("ログアウト完了")
+                Router.shared.showReStart()
+            } catch let error as NSError {
+                print("ログアウト失敗 " + error.localizedDescription)
+                let dialog = UIAlertController(title: "Logout Failure", message: error.localizedDescription, preferredStyle: .alert)
+                dialog.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(dialog, animated: true, completion: nil)
+            }
+        }
     }
 }
