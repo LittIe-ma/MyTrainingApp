@@ -59,7 +59,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             print("00")
         case [1, 0]: // Logout
             let dialog = UIAlertController(title: "Would you like to logout?", message: "", preferredStyle: .alert)
-            dialog.addAction(UIAlertAction(title: "Logout", style: .default, handler: { _ in
+            dialog.addAction(UIAlertAction(title: "Logout", style: .destructive, handler: { _ in
                 if Auth.auth().currentUser != nil {
                     do {
                         try Auth.auth().signOut()
