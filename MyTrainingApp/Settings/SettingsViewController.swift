@@ -8,40 +8,77 @@
 import UIKit
 import Firebase
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     static func makeFromStoryboard() -> SettingsViewController {
         let settingsVC = UIStoryboard.settingsViewController
         return settingsVC
     }
 
+    @IBOutlet weak var settingsTableView: UITableView!
+
+    let sectionTitleArray = ["ABOUT APPLICATION", "ACCOUNT"]
+    let cellContentsArray = [
+        ["Write review"],
+        ["Logout", "Delete Account"]
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        testLogoutButton()
+        settingsTableView.delegate = self
+        settingsTableView.dataSource = self
     }
 
-    private func testLogoutButton() {
-        let button = UIButton()
-        button.frame = CGRect(x: self.view.frame.width/4, y: self.view.frame.height/2, width: self.view.frame.width/2, height: 50)
-        button.setTitle("Logout", for: .normal)
-        button.backgroundColor = .green
-        button.addTarget(self, action: #selector(didTapLogout(_:)), for: .touchUpInside)
-        self.view.addSubview(button)
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
     }
 
-    @objc private func didTapLogout(_ sender: Any) {
-        if Auth.auth().currentUser != nil {
-            do {
-                try Auth.auth().signOut()
-                print("ログアウト完了")
-                Router.shared.showReStart()
-            } catch let error as NSError {
-                print("ログアウト失敗 " + error.localizedDescription)
-                let dialog = UIAlertController(title: "Logout Failure", message: error.localizedDescription, preferredStyle: .alert)
-                dialog.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(dialog, animated: true, completion: nil)
-            }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        25
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        sectionTitleArray[section]
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        cellContentsArray[section].count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = settingsTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = cellContentsArray[indexPath.section][indexPath.row]
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        settingsTableView.deselectRow(at: indexPath, animated: true)
+        switch indexPath {
+        case [0, 0]: // Write review
+            print("00")
+        case [1, 0]: // Logout
+            let dialog = UIAlertController(title: "Would you like to logout?", message: "", preferredStyle: .alert)
+            dialog.addAction(UIAlertAction(title: "Logout", style: .default, handler: { _ in
+                if Auth.auth().currentUser != nil {
+                    do {
+                        try Auth.auth().signOut()
+                        print("ログアウト完了")
+                        Router.shared.showReStart()
+                    } catch let error as NSError {
+                        print("ログアウト失敗 " + error.localizedDescription)
+                        let dialog = UIAlertController(title: "Logout Failure", message: error.localizedDescription, preferredStyle: .alert)
+                        dialog.addAction(UIAlertAction(title: "OK", style: .default))
+                        self.present(dialog, animated: true, completion: nil)
+                    }
+                }
+            }))
+            dialog.addAction(UIAlertAction(title: "cancel", style: .cancel))
+            self.present(dialog, animated: true, completion: nil)
+        case [1, 1]: // Delete Account
+            print("11")
+        default:
+            break
         }
     }
 }
