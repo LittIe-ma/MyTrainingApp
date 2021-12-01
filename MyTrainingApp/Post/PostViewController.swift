@@ -23,7 +23,6 @@ class PostViewController: UIViewController, UITextFieldDelegate {
 
         profileImageView.setCircle()
         setPostButton()
-        setKeyBoard()
         setPlaceholder()
     }
 
@@ -40,16 +39,6 @@ class PostViewController: UIViewController, UITextFieldDelegate {
 
     @objc private func didTapPost() {
         print("button tapped")
-    }
-
-    private func setKeyBoard() {
-        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 40))
-        toolBar.barStyle = .default
-        toolBar.sizeToFit()
-        let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
-        let commitButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.didTapDoneKeyBoard))
-        toolBar.items = [spacer, commitButton]
-        postTextView.inputAccessoryView = toolBar
     }
 
     private func setPlaceholder() {
