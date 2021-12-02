@@ -173,9 +173,9 @@
                     <connections>
                         <outlet property="emailField" destination="HCx-IM-Q7n" id="YlQ-Na-hfo"/>
                         <outlet property="loginButton" destination="N97-gU-7f6" id="idi-rc-qVY"/>
+                        <outlet property="nameField" destination="CAp-nC-di0" id="9pO-CW-C4U"/>
                         <outlet property="passwordField" destination="s4e-Jy-7KN" id="WwH-Tp-SJ6"/>
                         <outlet property="signUpButton" destination="w6g-iY-d3K" id="x9B-eV-Ld0"/>
-                        <outlet property="userNameField" destination="CAp-nC-di0" id="ncc-Ei-EMb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

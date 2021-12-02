@@ -17,10 +17,21 @@ final class Router {
 
     func showRoot(window: UIWindow?) {
         if Auth.auth().currentUser?.uid != nil {
-            let tabBarController = TabBarController.makeFromStoryboard()
-            window?.rootViewController = tabBarController
-            window?.makeKeyAndVisible()
-            self.window = window
+            Auth.auth().currentUser?.reload(completion: { error in
+                if error == nil {
+                    if Auth.auth().currentUser?.isEmailVerified == true {
+                        let tabBarController = TabBarController.makeFromStoryboard()
+                        window?.rootViewController = tabBarController
+                        window?.makeKeyAndVisible()
+                        self.window = window
+                    } else if Auth.auth().currentUser?.isEmailVerified == false {
+                        let viewController = LoginViewController.makeFromStoryboard()
+                        window?.rootViewController = viewController
+                        window?.makeKeyAndVisible()
+                        self.window = window
+                    }
+                }
+            })
         } else {
             let viewController = LoginViewController.makeFromStoryboard()
             window?.rootViewController = viewController

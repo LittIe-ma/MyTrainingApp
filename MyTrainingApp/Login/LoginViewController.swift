@@ -42,8 +42,14 @@ class LoginViewController: UIViewController {
            let password = passwordField.text {
             Auth.auth().signIn(withEmail: email, password: password, completion: { (result, error) in
                 if let user = result?.user {
-                    print("ログイン完了　uid:" + user.uid)
-                    Router.shared.showReStart()
+                    if Auth.auth().currentUser?.isEmailVerified == true {
+                        print("ログイン完了　uid:" + user.uid)
+                        Router.shared.showReStart()
+                    } else if Auth.auth().currentUser?.isEmailVerified == false {
+                        let dialog = UIAlertController(title: "Email verification has not yet been completed.", message: "We have sent you a confirmation email, please check it.", preferredStyle: .alert)
+                        dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(dialog, animated: true, completion: nil)
+                    }
                 } else if let error = error {
                     print("ログイン失敗 " + error.localizedDescription)
                     let dialog = UIAlertController(title: "Login Failure", message: error.localizedDescription, preferredStyle: .alert)
