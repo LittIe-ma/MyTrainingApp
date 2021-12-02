@@ -17,10 +17,11 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupTab()
+        setupRootView()
     }
 
-    private func setupTab() {
+    private func setupRootView() {
+        var viewControllers = [UIViewController]()
         let home = UIStoryboard.homeViewController
         let keep = UIStoryboard.keepListViewController
         let post = UIStoryboard.postViewController
@@ -33,7 +34,12 @@ class TabBarController: UITabBarController {
         settings.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape"), selectedImage: nil)
 
         viewControllers = [home, keep, post, profile, settings]
+        viewControllers = viewControllers.map { UINavigationController(rootViewController: $0) }
+        setViewControllers(viewControllers, animated: false)
 
+        setStatusBarbackgroundColor(.green)
+        UINavigationBar.appearance().backgroundColor = .green
+        UINavigationBar.appearance().barTintColor = .green
         UITabBar.appearance().tintColor = .purple
         UITabBar.appearance().barTintColor = .green
     }
