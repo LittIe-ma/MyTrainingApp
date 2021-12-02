@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Keep-->
+        <!--Keep List View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="KeepListViewController" customModule="MyTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,6 @@
                             <constraint firstItem="0SR-LK-Ftb" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="yne-sU-UsV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Keep" image="star" catalog="system" id="00g-zS-s2J"/>
                     <navigationItem key="navigationItem" id="H05-Ub-LQT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -43,7 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

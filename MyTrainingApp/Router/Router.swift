@@ -17,8 +17,8 @@ final class Router {
 
     func showRoot(window: UIWindow?) {
         if Auth.auth().currentUser?.uid != nil {
-            let viewController = TabBarController.makeFromStoryboard()
-            let navigationController = UINavigationController(rootViewController: viewController)
+            let tabBarController = TabBarController.makeFromStoryboard()
+            let navigationController = UINavigationController(rootViewController: tabBarController)
             navigationController.navigationBar.barTintColor = .green
             navigationController.navigationBar.backgroundColor = .green
             navigationController.setStatusBarbackgroundColor(.green)

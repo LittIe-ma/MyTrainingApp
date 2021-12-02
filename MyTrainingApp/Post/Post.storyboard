@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Post-->
+        <!--Post View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="PostViewController" customModule="MyTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +85,6 @@
                             <constraint firstItem="Jfc-M4-6of" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="sDR-w1-H6W"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Post" image="plus.square" catalog="system" id="8jM-2p-73d"/>
                     <navigationItem key="navigationItem" id="dkL-0y-Lzx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -100,7 +99,6 @@
     </scenes>
     <resources>
         <image name="DefaultProfileIcon" width="512" height="512"/>
-        <image name="plus.square" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

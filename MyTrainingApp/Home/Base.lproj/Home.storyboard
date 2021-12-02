@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MyTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,6 @@
                             <constraint firstItem="nzA-v4-gIL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="v6J-mW-Ua5"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="MUM-3N-5HK"/>
                     <navigationItem key="navigationItem" id="THn-Xs-QLs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -43,7 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="homekit" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
