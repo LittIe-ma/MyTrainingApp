@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
@@ -31,6 +32,42 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBAction func exitByCancel(_ sender: Any) {
         Router.shared.backProfile(from: self)
+    }
+
+    @IBAction func didTapSave(_ sender: Any) {
+        guard !(nameTextField.text ?? "").isEmpty else {
+            let dialog = UIAlertController(title: "Name is empty field.", message: "Please enter your name.", preferredStyle: .alert)
+            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(dialog, animated: true, completion: nil)
+            return
+        }
+
+        let name = nameTextField.text ?? ""
+        let height = heightTextField.text ?? "Not entered"
+        let weight = weightTextField.text ?? "Not entered"
+        let benchPress = benchPressTextField.text ?? "Not entered"
+        let squat = squatTextField.text ?? "Not entered"
+        let deadLift = deadLiftTextField.text ?? "Not entered"
+
+        firestoreSetData(name: name, height: height, weight: weight, benchPress: benchPress, squat: squat, deadLift: deadLift)
+    }
+
+    private func firestoreSetData(name: String, height: String, weight: String, benchPress: String, squat: String, deadLift: String) {
+        guard let user = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("users").document(user).setData([
+            "name": name,
+            "height": height,
+            "weight": weight,
+            "benchPress": benchPress,
+            "squat": squat,
+            "deadLift": deadLift
+        ], completion: { error in
+            if let error = error {
+                print("プロフィール更新失敗　" + error.localizedDescription)
+            } else {
+                print("プロフィール更新成功")
+            }
+        })
     }
 
     @IBAction func didTapProfileImageChange(_ sender: Any) {

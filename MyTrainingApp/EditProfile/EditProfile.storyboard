@@ -390,6 +390,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="AnN-9f-WOq">
                             <color key="tintColor" systemColor="systemPurpleColor"/>
+                            <connections>
+                                <action selector="didTapSave:" destination="Y6W-OH-hqX" id="3p0-MT-c8G"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

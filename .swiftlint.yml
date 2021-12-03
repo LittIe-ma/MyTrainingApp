@@ -1,6 +1,7 @@
 disabled_rules:
 - trailing_whitespace # コードの記載のない改行を許可したい
 - force_cast # force_cast は場合によっては使用するため
+- function_parameter_count # 6個以上の引数を使用したい
 
 
 excluded:
