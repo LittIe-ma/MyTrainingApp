@@ -43,16 +43,17 @@ class SignUpViewController: UIViewController {
     }
 
     @objc private func didTapSignUp(_ sender: Any) {
-        if emailField.text == "" || passwordField.text == "" || nameField.text == "" {
-            let dialog = UIAlertController(title: "There is an empty field.", message: "", preferredStyle: .alert)
+        guard !(nameField.text ?? "").isEmpty else {
+            let dialog = UIAlertController(title: "There is an empty field.", message: "Please enter your name.", preferredStyle: .alert)
             dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(dialog, animated: true, completion: nil)
-        } else {
-            let email = emailField.text ?? ""
-            let password = passwordField.text ?? ""
-            let name = nameField.text ?? ""
-            signup(email: email, password: password, name: name)
+            return
         }
+        
+        let email = emailField.text ?? ""
+        let password = passwordField.text ?? ""
+        let name = nameField.text ?? ""
+        signup(email: email, password: password, name: name)
     }
 
     private func signup(email: String, password: String, name: String) {
