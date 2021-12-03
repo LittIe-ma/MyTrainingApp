@@ -10,6 +10,8 @@
 		3002A5DE274E6C2D00D8E3C9 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3002A5DD274E6C2D00D8E3C9 /* IQKeyboardManagerSwift */; };
 		3002A5E2274E742500D8E3C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3002A5E1274E742400D8E3C9 /* SignUpViewController.swift */; };
 		3002A5E4274E743B00D8E3C9 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3002A5E3274E743B00D8E3C9 /* SignUp.storyboard */; };
+		303C32352759C1A500F00307 /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 303C32342759C1A400F00307 /* ResetPassword.storyboard */; };
+		303C32372759C1BE00F00307 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303C32362759C1BE00F00307 /* ResetPasswordViewController.swift */; };
 		30953B40274A615C004889C4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B3F274A615C004889C4 /* Router.swift */; };
 		30953B42274A644F004889C4 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B41274A644F004889C4 /* UIViewController+.swift */; };
 		30953B44274A646A004889C4 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30953B43274A646A004889C4 /* UITextField+.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		3002A5E1274E742400D8E3C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3002A5E3274E743B00D8E3C9 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		303C32342759C1A400F00307 /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
+		303C32362759C1BE00F00307 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		30953B3F274A615C004889C4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		30953B41274A644F004889C4 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		30953B43274A646A004889C4 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
@@ -118,6 +122,15 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		303C32332759C17E00F00307 /* ResetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				303C32342759C1A400F00307 /* ResetPassword.storyboard */,
+				303C32362759C1BE00F00307 /* ResetPasswordViewController.swift */,
+			);
+			path = ResetPassword;
+			sourceTree = "<group>";
+		};
 		30953B3E274A613B004889C4 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +170,7 @@
 				30E66BF72748D58300893647 /* Settings */,
 				30E66BF62748D57900893647 /* Login */,
 				3002A5E0274E73E900D8E3C9 /* SignUp */,
+				303C32332759C17E00F00307 /* ResetPassword */,
 				30E66BFA2748D5C100893647 /* CustomCell */,
 				30E66BF92748D5A500893647 /* Extension */,
 				30953B3E274A613B004889C4 /* Router */,
@@ -342,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				309991F42751C57C005A54F5 /* GoogleService-Info.plist in Resources */,
+				303C32352759C1A500F00307 /* ResetPassword.storyboard in Resources */,
 				30E3BB11273B5FCE00702F43 /* LaunchScreen.storyboard in Resources */,
 				30E3BB0E273B5FCE00702F43 /* Assets.xcassets in Resources */,
 				3002A5E4274E743B00D8E3C9 /* SignUp.storyboard in Resources */,
@@ -432,6 +447,7 @@
 				3002A5E2274E742500D8E3C9 /* SignUpViewController.swift in Sources */,
 				30E3BB29273B74C200702F43 /* SettingsViewController.swift in Sources */,
 				30953B42274A644F004889C4 /* UIViewController+.swift in Sources */,
+				303C32372759C1BE00F00307 /* ResetPasswordViewController.swift in Sources */,
 				30E3BB05273B5FC600702F43 /* AppDelegate.swift in Sources */,
 				30E3BB1B273B6ECD00702F43 /* ProfileViewController.swift in Sources */,
 				30953B40274A615C004889C4 /* Router.swift in Sources */,

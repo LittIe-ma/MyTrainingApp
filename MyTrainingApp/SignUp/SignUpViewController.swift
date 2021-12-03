@@ -10,6 +10,11 @@ import Firebase
 
 class SignUpViewController: UIViewController {
 
+    static func makeFromStoryboard() -> SignUpViewController {
+        let signUpVC = UIStoryboard.signUpViewController
+        return signUpVC
+    }
+
     @IBOutlet private weak var emailField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var nameField: UITextField!
@@ -18,15 +23,10 @@ class SignUpViewController: UIViewController {
             signUpButton.addTarget(self, action: #selector(didTapSignUp(_:)), for: .touchUpInside)
         }
     }
-    @IBOutlet private weak var loginButton: UIButton! {
+    @IBOutlet private weak var backLoginButton: UIButton! {
         didSet {
-            loginButton.addTarget(self, action: #selector(didTapLogin(_:)), for: .touchUpInside)
+            backLoginButton.addTarget(self, action: #selector(didTapBackLogin(_:)), for: .touchUpInside)
         }
-    }
-
-    static func makeFromStoryboard() -> SignUpViewController {
-        let signUpVC = UIStoryboard.signUpViewController
-        return signUpVC
     }
 
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class SignUpViewController: UIViewController {
 
     }
 
-    @objc private func didTapLogin(_ sender: UIResponder) {
+    @objc private func didTapBackLogin(_ sender: UIResponder) {
         Router.shared.backLogin(from: self)
     }
 

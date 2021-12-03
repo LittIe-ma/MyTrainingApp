@@ -10,6 +10,11 @@ import Firebase
 
 class LoginViewController: UIViewController {
 
+    static func makeFromStoryboard() -> LoginViewController {
+        let loginVC = UIStoryboard.loginViewController
+        return loginVC
+    }
+
     @IBOutlet private weak var emailField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var loginButton: UIButton! {
@@ -17,15 +22,15 @@ class LoginViewController: UIViewController {
             loginButton.addTarget(self, action: #selector(didTapLogin(_:)), for: .touchUpInside)
         }
     }
-    @IBOutlet private weak var signUpButton: UIButton! {
+    @IBOutlet weak var resetPasswordButton: UIButton! {
         didSet {
-            signUpButton.addTarget(self, action: #selector(didTapSignUp(_:)), for: .touchUpInside)
+            resetPasswordButton.addTarget(self, action: #selector(didTapResetPassword(_:)), for: .touchUpInside)
         }
     }
-
-    static func makeFromStoryboard() -> LoginViewController {
-        let loginVC = UIStoryboard.loginViewController
-        return loginVC
+    @IBOutlet private weak var showSignUpButton: UIButton! {
+        didSet {
+            showSignUpButton.addTarget(self, action: #selector(didTapShowSignUp(_:)), for: .touchUpInside)
+        }
     }
 
     override func viewDidLoad() {
@@ -33,7 +38,7 @@ class LoginViewController: UIViewController {
 
     }
 
-    @objc private func didTapSignUp(_ sender: Any) {
+    @objc private func didTapShowSignUp(_ sender: Any) {
         Router.shared.showSignUp(from: self)
     }
 
@@ -58,5 +63,9 @@ class LoginViewController: UIViewController {
                 }
             })
         }
+    }
+
+    @objc private func didTapResetPassword(_ sender: Any) {
+        Router.shared.showResetPassword(from: self)
     }
 }

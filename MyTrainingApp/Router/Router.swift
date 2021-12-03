@@ -25,39 +25,44 @@ final class Router {
                         window?.makeKeyAndVisible()
                         self.window = window
                     } else if Auth.auth().currentUser?.isEmailVerified == false {
-                        let viewController = LoginViewController.makeFromStoryboard()
-                        window?.rootViewController = viewController
+                        let loginVC = LoginViewController.makeFromStoryboard()
+                        window?.rootViewController = loginVC
                         window?.makeKeyAndVisible()
                         self.window = window
                     }
                 }
             })
         } else {
-            let viewController = LoginViewController.makeFromStoryboard()
-            window?.rootViewController = viewController
+            let loginVC = LoginViewController.makeFromStoryboard()
+            window?.rootViewController = loginVC
             window?.makeKeyAndVisible()
             self.window = window
         }
     }
 
     func showEditProfile(from: UIViewController) {
-        let viewController = EditProfileViewController.makeFromStoryboard()
-        show(from: from, next: viewController)
+        let editProfileVc = EditProfileViewController.makeFromStoryboard()
+        show(from: from, next: editProfileVc)
     }
 
     func showSignUp(from: UIViewController) {
-        let viewController = SignUpViewController.makeFromStoryboard()
-        show(from: from, next: viewController)
+        let signUpVC = SignUpViewController.makeFromStoryboard()
+        show(from: from, next: signUpVC)
+    }
+
+    func showResetPassword(from: UIViewController) {
+        let resetPasswordVC = ResetPasswordViewController.makeFromStoryboard()
+        show(from: from, next: resetPasswordVC)
     }
 
     func backProfile(from: UIViewController) {
-        let viewController = ProfileViewController.makeFromStoryboard()
-        back(from: from, next: viewController)
+        let profileVC = ProfileViewController.makeFromStoryboard()
+        back(from: from, prev: profileVC)
     }
 
     func backLogin(from: UIViewController) {
-        let viewController = LoginViewController.makeFromStoryboard()
-        back(from: from, next: viewController)
+        let loginVC = LoginViewController.makeFromStoryboard()
+        back(from: from, prev: loginVC)
     }
 
     func showReStart() {
@@ -74,7 +79,7 @@ private extension Router {
         }
     }
 
-    func back(from: UIViewController, next: UIViewController, animated: Bool = true) {
+    func back(from: UIViewController, prev: UIViewController, animated: Bool = true) {
         if let navigationController = from.navigationController {
             navigationController.popViewController(animated: animated)
         } else {

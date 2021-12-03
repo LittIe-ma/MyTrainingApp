@@ -43,4 +43,8 @@ extension UIStoryboard {
     static var loginViewController: LoginViewController {
         UIStoryboard.init(name: "Login", bundle: nil).instantiateInitialViewController() as! LoginViewController
     }
+
+    static var resetPasswordViewController: ResetPasswordViewController {
+        UIStoryboard.init(name: "ResetPassword", bundle: nil).instantiateInitialViewController() as! ResetPasswordViewController
+    }
 }

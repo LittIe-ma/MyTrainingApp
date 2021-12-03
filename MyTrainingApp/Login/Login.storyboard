@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login-->
+        <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="MyTrainingApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,8 +80,32 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8M-yJ-6cx">
+                                                        <rect key="frame" x="0.0" y="310" width="394" height="20"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="UmV-Zi-TGr"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX7-Bz-c87">
+                                                        <rect key="frame" x="0.0" y="330" width="394" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="SbA-W4-gbU"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Forget Password">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6A-0a-4JL">
-                                                        <rect key="frame" x="0.0" y="310" width="394" height="476"/>
+                                                        <rect key="frame" x="0.0" y="400" width="394" height="386"/>
                                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1U-ri-Mlr">
@@ -161,12 +185,12 @@
                             <constraint firstItem="da6-FK-Ivd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hLI-Gu-0oU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="lCj-vi-hZf"/>
                     <connections>
                         <outlet property="emailField" destination="xRF-XT-0Vc" id="ReJ-Z2-J1T"/>
                         <outlet property="loginButton" destination="nep-aI-tS3" id="2JC-St-Jos"/>
                         <outlet property="passwordField" destination="y6d-02-rjT" id="sb0-Om-zwU"/>
-                        <outlet property="signUpButton" destination="wxM-nV-NSn" id="lGA-J4-Hf1"/>
+                        <outlet property="resetPasswordButton" destination="rX7-Bz-c87" id="4gN-3t-0sa"/>
+                        <outlet property="showSignUpButton" destination="wxM-nV-NSn" id="JF7-TT-dom"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
