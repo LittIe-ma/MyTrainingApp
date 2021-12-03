@@ -394,13 +394,13 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="benchPressInputField" destination="hSh-wO-Q5q" id="UKt-22-ylx"/>
-                        <outlet property="deadLiftInputField" destination="D0h-Hy-jKR" id="N9R-32-LHN"/>
+                        <outlet property="benchPressTextField" destination="hSh-wO-Q5q" id="Cgo-QJ-IFp"/>
+                        <outlet property="deadLiftTextField" destination="D0h-Hy-jKR" id="GKs-FL-s1q"/>
                         <outlet property="editProfileImageView" destination="S8m-kQ-iBG" id="0Bo-al-7nO"/>
-                        <outlet property="heightInputField" destination="7dD-UD-cOj" id="CUS-Ns-lkv"/>
-                        <outlet property="nameInputField" destination="UYb-dx-U15" id="5Hg-lL-OFe"/>
-                        <outlet property="squatInputField" destination="OyB-Tx-7O4" id="xTa-P9-FVi"/>
-                        <outlet property="weightInputField" destination="B40-fv-J72" id="uLt-UP-WWl"/>
+                        <outlet property="heightTextField" destination="7dD-UD-cOj" id="bp7-eg-trR"/>
+                        <outlet property="nameTextField" destination="UYb-dx-U15" id="jEO-Wo-DE6"/>
+                        <outlet property="squatTextField" destination="OyB-Tx-7O4" id="E3g-4R-EGt"/>
+                        <outlet property="weightTextField" destination="B40-fv-J72" id="I2T-fE-UgR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

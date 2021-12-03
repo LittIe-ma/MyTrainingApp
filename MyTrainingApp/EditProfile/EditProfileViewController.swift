@@ -14,12 +14,12 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
         return editProfileVC
     }
 
-    @IBOutlet private weak var nameInputField: UITextField!
-    @IBOutlet private weak var heightInputField: UITextField!
-    @IBOutlet private weak var weightInputField: UITextField!
-    @IBOutlet private weak var benchPressInputField: UITextField!
-    @IBOutlet private weak var squatInputField: UITextField!
-    @IBOutlet private weak var deadLiftInputField: UITextField!
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var heightTextField: UITextField!
+    @IBOutlet private weak var weightTextField: UITextField!
+    @IBOutlet private weak var benchPressTextField: UITextField!
+    @IBOutlet private weak var squatTextField: UITextField!
+    @IBOutlet private weak var deadLiftTextField: UITextField!
     @IBOutlet private weak var editProfileImageView: UIImageView!
 
     override func viewDidLoad() {
@@ -36,13 +36,27 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func didTapProfileImageChange(_ sender: Any) {
         print("tapped profile image")
     }
+}
+
+extension EditProfileViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     private func setupTextField() {
-        nameInputField.setUnderLine()
-        heightInputField.setUnderLine()
-        weightInputField.setUnderLine()
-        benchPressInputField.setUnderLine()
-        squatInputField.setUnderLine()
-        deadLiftInputField.setUnderLine()
+        nameTextField.delegate = self
+        heightTextField.delegate = self
+        weightTextField.delegate = self
+        benchPressTextField.delegate = self
+        squatTextField.delegate = self
+        deadLiftTextField.delegate = self
+        
+        nameTextField.setUnderLine()
+        heightTextField.setUnderLine()
+        weightTextField.setUnderLine()
+        benchPressTextField.setUnderLine()
+        squatTextField.setUnderLine()
+        deadLiftTextField.setUnderLine()
     }
 }
