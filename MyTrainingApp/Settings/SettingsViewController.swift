@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SettingsViewController: UIViewController {
 
     static func makeFromStoryboard() -> SettingsViewController {
         let settingsVC = UIStoryboard.settingsViewController
@@ -20,7 +20,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     let sectionTitleArray = ["ABOUT APPLICATION", "ACCOUNT"]
     let cellContentsArray = [
         ["Write review"],
-        ["Logout", "Delete Account"]
+        ["Logout", "Withdraw"]
     ]
 
     override func viewDidLoad() {
@@ -30,6 +30,59 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         settingsTableView.dataSource = self
     }
 
+    private func logout() {
+        let dialog = UIAlertController(title: "Would you like to logout?", message: "", preferredStyle: .alert)
+        dialog.addAction(UIAlertAction(title: "Logout", style: .destructive, handler: { _ in
+            if Auth.auth().currentUser != nil {
+                do {
+                    try Auth.auth().signOut()
+                    print("ログアウト完了")
+                    Router.shared.showReStart()
+                } catch let error as NSError {
+                    print("ログアウト失敗 " + error.localizedDescription)
+                    let dialog = UIAlertController(title: "Logout Failure", message: error.localizedDescription, preferredStyle: .alert)
+                    dialog.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(dialog, animated: true, completion: nil)
+                }
+            }
+        }))
+        dialog.addAction(UIAlertAction(title: "cancel", style: .cancel))
+        self.present(dialog, animated: true, completion: nil)
+    }
+
+    private func withdraw() {
+        let dialog = UIAlertController(title: "Are you sure you want to do this?", message: "", preferredStyle: .actionSheet)
+        dialog.addAction(UIAlertAction(title: "Withdraw", style: .destructive, handler: { _ in
+            self.firestoreDeleteData()
+            Auth.auth().currentUser?.delete { error in
+                if let error = error {
+                    print("退会失敗" + error.localizedDescription)
+                    let dialog = UIAlertController(title: "Withdraw Failure", message: error.localizedDescription, preferredStyle: .alert)
+                    dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(dialog, animated: true, completion: nil)
+                } else {
+                    print("退会完了")
+                    Router.shared.showReStart()
+                }
+            }
+        }))
+        dialog.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
+        self.present(dialog, animated: true, completion: nil)
+    }
+
+    private func firestoreDeleteData() {
+        guard let user = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("users").document(user).delete { error in
+            if let error = error {
+                print("ユーザー削除失敗　" + error.localizedDescription)
+            } else {
+                print("ユーザー削除完了")
+            }
+        }
+    }
+}
+
+extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         2
     }
@@ -55,30 +108,10 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         settingsTableView.deselectRow(at: indexPath, animated: true)
         switch indexPath {
-        case [0, 0]: // Write review
-            print("00")
-        case [1, 0]: // Logout
-            let dialog = UIAlertController(title: "Would you like to logout?", message: "", preferredStyle: .alert)
-            dialog.addAction(UIAlertAction(title: "Logout", style: .destructive, handler: { _ in
-                if Auth.auth().currentUser != nil {
-                    do {
-                        try Auth.auth().signOut()
-                        print("ログアウト完了")
-                        Router.shared.showReStart()
-                    } catch let error as NSError {
-                        print("ログアウト失敗 " + error.localizedDescription)
-                        let dialog = UIAlertController(title: "Logout Failure", message: error.localizedDescription, preferredStyle: .alert)
-                        dialog.addAction(UIAlertAction(title: "OK", style: .default))
-                        self.present(dialog, animated: true, completion: nil)
-                    }
-                }
-            }))
-            dialog.addAction(UIAlertAction(title: "cancel", style: .cancel))
-            self.present(dialog, animated: true, completion: nil)
-        case [1, 1]: // Delete Account
-            print("11")
-        default:
-            break
+        case [0, 0]: print("Write review")
+        case [1, 0]: logout()
+        case [1, 1]: withdraw()
+        default: break
         }
     }
 }

@@ -95,7 +95,7 @@ class SignUpViewController: UIViewController {
                 print("メールアドレス検証成功")
                 let dialog = UIAlertController(title: "Temporary registration completed", message: "A confirmation email has been sent to the email address you entered.", preferredStyle: .alert)
                 dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                    Router.shared.showReStart()
+                    Router.shared.backLogin(from: self)
                 }))
                 self.present(dialog, animated: true, completion: nil)
             }
