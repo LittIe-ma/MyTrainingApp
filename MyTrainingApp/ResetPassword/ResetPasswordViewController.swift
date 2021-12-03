@@ -34,12 +34,6 @@ class ResetPasswordViewController: UIViewController {
     }
 
     @objc private func didTapSendEmail(_ sender: Any) {
-        guard !(emailField.text ?? "").isEmpty else {
-            let dialog = UIAlertController(title: "Please enter your email address.", message: "", preferredStyle: .alert)
-            dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(dialog, animated: true, completion: nil)
-            return
-        }
         sendPasswordReset()
     }
 
@@ -48,6 +42,9 @@ class ResetPasswordViewController: UIViewController {
         Auth.auth().sendPasswordReset(withEmail: email, completion: { error in
             if let error = error {
                 print("パスワードリセットメール送信エラー　" + error.localizedDescription)
+                let dialog = UIAlertController(title: "Send Failure", message: error.localizedDescription, preferredStyle: .alert)
+                dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(dialog, animated: true, completion: nil)
             } else {
                 print("パスワードリセットメール送信完了")
                 let dialog = UIAlertController(title: "Send Email", message: "Password reset email has been sent.", preferredStyle: .alert)
