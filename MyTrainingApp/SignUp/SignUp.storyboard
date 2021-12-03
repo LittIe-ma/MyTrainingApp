@@ -42,41 +42,41 @@
                                                         </constraints>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HCx-IM-Q7n">
-                                                        <rect key="frame" x="0.0" y="80" width="394" height="70"/>
+                                                        <rect key="frame" x="0.0" y="80" width="394" height="50"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="h4y-fO-nEP"/>
+                                                            <constraint firstAttribute="height" constant="50" id="h4y-fO-nEP"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s4e-Jy-7KN">
-                                                        <rect key="frame" x="0.0" y="150" width="394" height="70"/>
+                                                        <rect key="frame" x="0.0" y="130" width="394" height="50"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="yjJ-25-gna"/>
+                                                            <constraint firstAttribute="height" constant="50" id="yjJ-25-gna"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CAp-nC-di0">
-                                                        <rect key="frame" x="0.0" y="220" width="394" height="70"/>
+                                                        <rect key="frame" x="0.0" y="180" width="394" height="50"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="nWC-3u-gmK"/>
+                                                            <constraint firstAttribute="height" constant="50" id="nWC-3u-gmK"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IbG-QB-hkh">
-                                                        <rect key="frame" x="0.0" y="290" width="394" height="20"/>
+                                                        <rect key="frame" x="0.0" y="230" width="394" height="20"/>
                                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="bvc-Fh-kKt"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6g-iY-d3K">
-                                                        <rect key="frame" x="0.0" y="310" width="394" height="70"/>
+                                                        <rect key="frame" x="0.0" y="250" width="394" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="eJg-jT-3mP"/>
+                                                            <constraint firstAttribute="height" constant="50" id="eJg-jT-3mP"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -90,7 +90,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pb8-tK-936">
-                                                        <rect key="frame" x="0.0" y="380" width="394" height="406"/>
+                                                        <rect key="frame" x="0.0" y="300" width="394" height="486"/>
                                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXp-xO-0XO">

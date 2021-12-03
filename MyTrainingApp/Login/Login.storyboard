@@ -42,33 +42,33 @@
                                                         </constraints>
                                                     </view>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xRF-XT-0Vc">
-                                                        <rect key="frame" x="0.0" y="80" width="394" height="70"/>
+                                                        <rect key="frame" x="0.0" y="80" width="394" height="50"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="5bA-vR-nd6"/>
+                                                            <constraint firstAttribute="height" constant="50" id="5bA-vR-nd6"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y6d-02-rjT">
-                                                        <rect key="frame" x="0.0" y="150" width="394" height="70"/>
+                                                        <rect key="frame" x="0.0" y="130" width="394" height="50"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="Oe4-dX-zNc"/>
+                                                            <constraint firstAttribute="height" constant="50" id="Oe4-dX-zNc"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="He7-IM-MJt">
-                                                        <rect key="frame" x="0.0" y="220" width="394" height="20"/>
+                                                        <rect key="frame" x="0.0" y="180" width="394" height="20"/>
                                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="e9M-Sm-2Qc"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nep-aI-tS3">
-                                                        <rect key="frame" x="0.0" y="240" width="394" height="70"/>
+                                                        <rect key="frame" x="0.0" y="200" width="394" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="w8x-vi-5uI"/>
+                                                            <constraint firstAttribute="height" constant="50" id="w8x-vi-5uI"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,17 +81,17 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8M-yJ-6cx">
-                                                        <rect key="frame" x="0.0" y="310" width="394" height="20"/>
+                                                        <rect key="frame" x="0.0" y="250" width="394" height="20"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="UmV-Zi-TGr"/>
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rX7-Bz-c87">
-                                                        <rect key="frame" x="0.0" y="330" width="394" height="70"/>
+                                                        <rect key="frame" x="0.0" y="270" width="394" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="70" id="SbA-W4-gbU"/>
+                                                            <constraint firstAttribute="height" constant="50" id="SbA-W4-gbU"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -105,7 +105,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6A-0a-4JL">
-                                                        <rect key="frame" x="0.0" y="400" width="394" height="386"/>
+                                                        <rect key="frame" x="0.0" y="320" width="394" height="466"/>
                                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e1U-ri-Mlr">
