@@ -28,10 +28,14 @@ class SignUpViewController: UIViewController {
             backLoginButton.addTarget(self, action: #selector(didTapBackLogin(_:)), for: .touchUpInside)
         }
     }
+    private let passwordHiddenButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupTextField()
+        setupKeyboard()
+        setupPasswordHiddenButton()
     }
 
     @objc private func didTapBackLogin(_ sender: UIResponder) {
@@ -100,5 +104,39 @@ class SignUpViewController: UIViewController {
                 self.present(dialog, animated: true, completion: nil)
             }
         }
+    }
+
+    private func setupPasswordHiddenButton() {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: passwordField.frame.height * 0.7, height: passwordField.frame.height))
+        passwordHiddenButton.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        passwordHiddenButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
+        view.backgroundColor = .clear
+        passwordHiddenButton.tintColor = .black
+        passwordHiddenButton.addTarget(self, action: #selector(passwordIsHidden), for: .touchUpInside)
+        view.addSubview(passwordHiddenButton)
+        passwordField.rightViewMode = .always
+        passwordField.rightView = view
+    }
+
+    @objc private func passwordIsHidden() {
+        passwordField.isSecureTextEntry.toggle()
+        passwordHiddenButton.setImage(UIImage(systemName: passwordField.isSecureTextEntry ? "eye.fill" : "eye.slash.fill"), for: .normal)
+    }
+
+    private func setupKeyboard() {
+        passwordField.password()
+    }
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
+    private func setupTextField() {
+        emailField.delegate = self
+        passwordField.delegate = self
+        nameField.delegate = self
     }
 }

@@ -15,4 +15,10 @@ extension UITextField {
         addSubview(underLine)
         bringSubviewToFront(underLine)
     }
+
+    func password() {
+        self.keyboardType = .default
+        self.textContentType = .newPassword
+        self.isSecureTextEntry = true
+    }
 }
