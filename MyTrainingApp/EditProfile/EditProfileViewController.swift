@@ -21,13 +21,16 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet private weak var benchPressTextField: UITextField!
     @IBOutlet private weak var squatTextField: UITextField!
     @IBOutlet private weak var deadLiftTextField: UITextField!
-    @IBOutlet private weak var editProfileImageView: UIImageView!
+    @IBOutlet private weak var editProfileImageView: UIImageView! {
+        didSet {
+            editProfileImageView.setCircle()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTextField()
-        editProfileImageView.setCircle()
     }
 
     @IBAction func exitByCancel(_ sender: Any) {
@@ -95,5 +98,11 @@ extension EditProfileViewController: UITextFieldDelegate {
         benchPressTextField.setUnderLine()
         squatTextField.setUnderLine()
         deadLiftTextField.setUnderLine()
+
+        heightTextField.keyboardType = .numberPad
+        weightTextField.keyboardType = .numberPad
+        benchPressTextField.keyboardType = .numberPad
+        squatTextField.keyboardType = .numberPad
+        deadLiftTextField.keyboardType = .numberPad
     }
 }

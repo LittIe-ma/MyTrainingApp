@@ -20,7 +20,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet private weak var benchPressLabel: UILabel!
     @IBOutlet private weak var squatLabel: UILabel!
     @IBOutlet private weak var deadLiftLabel: UILabel!
-    @IBOutlet private weak var profileImageView: UIImageView!
+    @IBOutlet private weak var profileImageView: UIImageView! {
+        didSet {
+            profileImageView.setCircle()
+        }
+    }
     @IBOutlet weak var editProfileButton: UIButton! {
         didSet {
             editProfileButton.addTarget(self, action: #selector(didTapEditProfile(_:)), for: .touchUpInside)
@@ -31,7 +35,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         setupLabel()
-        profileImageView.setCircle()
     }
 
     private func setupLabel() {

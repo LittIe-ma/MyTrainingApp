@@ -9,7 +9,11 @@ import UIKit
 
 final class TimelineCell: UITableViewCell {
 
-    @IBOutlet private weak var postProfileImageView: UIImageView!
+    @IBOutlet private weak var postProfileImageView: UIImageView! {
+        didSet {
+            postProfileImageView.setCircle()
+        }
+    }
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var detailLabel: UILabel!
     @IBOutlet private weak var postedOnLabel: UILabel!
@@ -19,10 +23,6 @@ final class TimelineCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-
-    func setCell() {
-        postProfileImageView.setCircle()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
