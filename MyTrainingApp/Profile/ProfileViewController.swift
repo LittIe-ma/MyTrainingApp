@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController {
 
@@ -35,6 +36,35 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         setupLabel()
+        firestoreGetData()
+    }
+
+    private func firestoreGetData() {
+        guard let user = Auth.auth().currentUser?.uid else { return }
+        let usersRef = Firestore.firestore().collection("users").document(user)
+        usersRef.getDocument(completion: { (document, error) in
+            if let document = document {
+                let name = document.get("name")
+                let height = document.get("height")
+                let weight = document.get("weight")
+                let benchPress = document.get("benchPress")
+                let squat = document.get("squat")
+                let deadLift = document.get("deadLift")
+                self.nameLabel.text = name as? String
+                self.heightLabel.text = height as? String
+                self.weightLabel.text = weight as? String
+                self.benchPressLabel.text = benchPress as? String
+                self.squatLabel.text = squat as? String
+                self.deadLiftLabel.text = deadLift as? String
+            } else if let error = error {
+                print("ユーザー情報取得失敗　" + error.localizedDescription)
+                let dialog = UIAlertController(title: "Data acquisition failure", message: error.localizedDescription, preferredStyle: .alert)
+                dialog.addAction(UIAlertAction(title: "reload", style: .default, handler: { _ in
+                    self.firestoreGetData()
+                }))
+                self.present(dialog, animated: true, completion: nil)
+            }
+        })
     }
 
     private func setupLabel() {

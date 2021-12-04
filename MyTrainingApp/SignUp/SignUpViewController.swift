@@ -72,7 +72,12 @@ class SignUpViewController: UIViewController {
 
     private func firestoreSetData(name: String, of user: User) {
         Firestore.firestore().collection("users").document(user.uid).setData([
-            "name": name
+            "name": name,
+            "height": "Not entered",
+            "weight": "Not entered",
+            "benchPress": "Not entered",
+            "squat": "Not entered",
+            "deadLift": "Not enterd"
         ], completion: { error in
             if let error = error {
                 print("Firestore 新規登録失敗 " + error.localizedDescription)

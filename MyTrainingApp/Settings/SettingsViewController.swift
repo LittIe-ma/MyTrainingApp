@@ -58,7 +58,7 @@ class SettingsViewController: UIViewController {
                 if let error = error {
                     print("退会失敗" + error.localizedDescription)
                     let dialog = UIAlertController(title: "Withdraw Failure", message: error.localizedDescription, preferredStyle: .alert)
-                    dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in self.loginDialog() }))
                     self.present(dialog, animated: true, completion: nil)
                 } else {
                     print("退会完了")
@@ -80,7 +80,45 @@ class SettingsViewController: UIViewController {
             }
         }
     }
-}
+
+    private func loginDialog() {
+        var emailTextField: UITextField?
+        var passwordTextField: UITextField?
+        let dialog = UIAlertController(title: "Login", message: "Please enter your email and password.", preferredStyle: .alert)
+        dialog.addTextField(configurationHandler: { (textField: UITextField) in
+            emailTextField = textField
+            textField.placeholder = "Email"
+        })
+        dialog.addTextField(configurationHandler: { (textField: UITextField) in
+            passwordTextField = textField
+            textField.placeholder = "Password"
+            textField.password()
+        })
+        dialog.addAction(UIAlertAction(title: "Login", style: .default, handler: { _ in
+            if let email = emailTextField?.text,
+               let password = passwordTextField?.text {
+                self.login(email: email, password: password)
+            }
+        }))
+        dialog.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
+        self.present(dialog, animated: true, completion: nil)
+    }
+
+    private func login(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password, completion: { (result, error) in
+            if let user = result?.user {
+                print("ログイン完了 uid:" + user.uid)
+                self.withdraw()
+            } else if let error = error {
+                print("ログイン失敗 " + error.localizedDescription)
+                let dialog = UIAlertController(title: "Login Failure", message: error.localizedDescription, preferredStyle: .alert)
+                dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                dialog.addAction(UIAlertAction(title: "Retry", style: .destructive, handler: { _ in self.loginDialog() }))
+                self.present(dialog, animated: true, completion: nil)
+            }
+        })
+    }
+ }
 
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
