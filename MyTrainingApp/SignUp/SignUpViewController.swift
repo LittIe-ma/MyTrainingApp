@@ -77,7 +77,7 @@ class SignUpViewController: UIViewController {
             "weight": "Not entered",
             "benchPress": "Not entered",
             "squat": "Not entered",
-            "deadLift": "Not enterd"
+            "deadLift": "Not entered"
         ], completion: { error in
             if let error = error {
                 print("Firestore 新規登録失敗 " + error.localizedDescription)
