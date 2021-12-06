@@ -31,10 +31,50 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
 
         setupTextField()
+        firestoreGetData()
     }
 
     @IBAction func exitByCancel(_ sender: Any) {
         Router.shared.backProfile(from: self)
+    }
+
+    private func firestoreGetData() {
+        guard let user = Auth.auth().currentUser?.uid else { return }
+        let usersRef = Firestore.firestore().collection("users").document(user)
+        usersRef.getDocument(completion: { (document, error) in
+            if let document = document {
+                print("ユーザー情報取得成功")
+                let name = document.get("name")
+                let height = document.get("height")
+                let weight = document.get("weight")
+                let benchPress = document.get("benchPress")
+                let squat = document.get("squat")
+                let deadLift = document.get("deadLift")
+                self.displayProfileData(name: name as! String,
+                                        height: height as! String,
+                                        weight: weight as! String,
+                                        benchPress: benchPress as! String,
+                                        squat: squat as! String,
+                                        deadLift: deadLift as! String
+                )
+            } else if let error = error {
+                print("ユーザー情報取得失敗　" + error.localizedDescription)
+                let dialog = UIAlertController(title: "Data acquisition failure", message: error.localizedDescription, preferredStyle: .alert)
+                dialog.addAction(UIAlertAction(title: "reload", style: .default, handler: { _ in
+                    self.firestoreGetData()
+                }))
+                self.present(dialog, animated: true, completion: nil)
+            }
+        })
+    }
+
+    private func displayProfileData(name: String, height: String, weight: String, benchPress: String, squat: String, deadLift: String) {
+        nameTextField.text = name
+        heightTextField.text = height
+        weightTextField.text = weight
+        benchPressTextField.text = benchPress
+        squatTextField.text = squat
+        deadLiftTextField.text = deadLift
     }
 
     @IBAction func didTapSave(_ sender: Any) {
@@ -51,8 +91,9 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
         let benchPress = benchPressTextField.text ?? "Not entered"
         let squat = squatTextField.text ?? "Not entered"
         let deadLift = deadLiftTextField.text ?? "Not entered"
-
         firestoreSetData(name: name, height: height, weight: weight, benchPress: benchPress, squat: squat, deadLift: deadLift)
+
+        Router.shared.backProfile(from: self)
     }
 
     private func firestoreSetData(name: String, height: String, weight: String, benchPress: String, squat: String, deadLift: String) {

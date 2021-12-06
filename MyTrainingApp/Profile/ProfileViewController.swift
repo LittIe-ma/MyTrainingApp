@@ -39,11 +39,18 @@ class ProfileViewController: UIViewController {
         firestoreGetData()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        firestoreGetData()
+    }
+
     private func firestoreGetData() {
         guard let user = Auth.auth().currentUser?.uid else { return }
         let usersRef = Firestore.firestore().collection("users").document(user)
         usersRef.getDocument(completion: { (document, error) in
             if let document = document {
+                print("ユーザー情報取得成功")
                 let name = document.get("name")
                 let height = document.get("height")
                 let weight = document.get("weight")
