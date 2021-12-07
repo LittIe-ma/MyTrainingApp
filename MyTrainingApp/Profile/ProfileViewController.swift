@@ -36,7 +36,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         setupLabel()
-        firestoreGetData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -57,12 +56,13 @@ class ProfileViewController: UIViewController {
                 let benchPress = document.get("benchPress")
                 let squat = document.get("squat")
                 let deadLift = document.get("deadLift")
-                self.nameLabel.text = name as? String
-                self.heightLabel.text = height as? String
-                self.weightLabel.text = weight as? String
-                self.benchPressLabel.text = benchPress as? String
-                self.squatLabel.text = squat as? String
-                self.deadLiftLabel.text = deadLift as? String
+                self.displayProfileData(name: name as! String,
+                                        height: height as! String,
+                                        weight: weight as! String,
+                                        benchPress: benchPress as! String,
+                                        squat: squat as! String,
+                                        deadLift: deadLift as! String
+                )
             } else if let error = error {
                 print("ユーザー情報取得失敗　" + error.localizedDescription)
                 let dialog = UIAlertController(title: "Data acquisition failure", message: error.localizedDescription, preferredStyle: .alert)
@@ -72,6 +72,15 @@ class ProfileViewController: UIViewController {
                 self.present(dialog, animated: true, completion: nil)
             }
         })
+    }
+
+    private func displayProfileData(name: String, height: String, weight: String, benchPress: String, squat: String, deadLift: String) {
+        nameLabel.text = name
+        heightLabel.text = height
+        weightLabel.text = weight
+        benchPressLabel.text = benchPress
+        squatLabel.text = squat
+        deadLiftLabel.text = deadLift
     }
 
     private func setupLabel() {
