@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 import Kingfisher
+import PhotosUI
 
 class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
@@ -130,8 +131,13 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
 
-    @IBAction func didTapProfileImageChange(_ sender: Any) {
-        print("tapped profile image")
+    @IBAction func didTapChangeProfileImage(_ sender: Any) {
+        let dialog = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        dialog.addAction(UIAlertAction(title: "Remove Current Photo", style: .default, handler: {_ in }))
+        dialog.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: {_ in self.activateCamera() }))
+        dialog.addAction(UIAlertAction(title: "Choose From Library", style: .default, handler: {_ in self.activateCameraRoll() }))
+        dialog.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
+        self.present(dialog, animated: true, completion: nil)
     }
 }
 
@@ -161,5 +167,49 @@ extension EditProfileViewController: UITextFieldDelegate {
         benchPressTextField.keyboardType = .numberPad
         squatTextField.keyboardType = .numberPad
         deadLiftTextField.keyboardType = .numberPad
+    }
+}
+
+extension EditProfileViewController: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true)
+        if let itemProvider = results.first?.itemProvider, itemProvider.canLoadObject(ofClass: UIImage.self) {
+            let previousImage = editProfileImageView.image
+            itemProvider.loadObject(ofClass: UIImage.self) { [weak self] image, error in
+                DispatchQueue.main.async {
+                    guard let self = self, let image = image as? UIImage, self.editProfileImageView.image == previousImage else { return }
+                    self.editProfileImageView.image = image
+                }
+                if let error = error {
+                    print("画像選択失敗 " + error.localizedDescription)
+                }
+            }
+        }
+    }
+
+    private func activateCameraRoll() {
+        var configuration = PHPickerConfiguration()
+        configuration.selectionLimit = 1
+        configuration.filter = .images
+        configuration.preferredAssetRepresentationMode = .current
+        let picker = PHPickerViewController(configuration: configuration)
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+}
+
+extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private func activateCamera() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
+    }
+
+    func imagePickerController(_ imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        if let pickedImage = info[.originalImage] as? UIImage {
+            editProfileImageView.image = pickedImage
+        }
+        dismiss(animated: false)
     }
 }

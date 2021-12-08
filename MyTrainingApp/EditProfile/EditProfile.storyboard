@@ -409,7 +409,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="iSl-La-Ktc">
                     <connections>
-                        <action selector="didTapProfileImageChange:" destination="Y6W-OH-hqX" id="Gqy-hV-jXg"/>
+                        <action selector="didTapChangeProfileImage:" destination="Y6W-OH-hqX" id="Lrx-ne-Hhe"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
