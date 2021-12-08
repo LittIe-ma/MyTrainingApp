@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
+import Kingfisher
 
 class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
@@ -32,6 +34,7 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
         setupTextField()
         firestoreGetData()
+        displayProfileImage()
     }
 
     @IBAction func exitByCancel(_ sender: Any) {
@@ -112,6 +115,19 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
                 print("プロフィール更新成功")
             }
         })
+    }
+
+    private func displayProfileImage() {
+        let storageRef = Storage.storage().reference(forURL: "gs://mytrainingapp-9ffaa.appspot.com")
+        let defaultProfileImageRef = storageRef.child("DefaultProfileImage.jpeg")
+        defaultProfileImageRef.downloadURL { url, error in
+            if let error = error {
+                print("画像取得失敗" + error.localizedDescription)
+            } else {
+                print("画像取得成功 url: \(String(describing: url))")
+                self.editProfileImageView.kf.setImage(with: url)
+            }
+        }
     }
 
     @IBAction func didTapProfileImageChange(_ sender: Any) {
