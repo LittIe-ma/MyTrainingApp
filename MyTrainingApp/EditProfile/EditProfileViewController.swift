@@ -91,6 +91,10 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
             return
         }
 
+        if editProfileImageView.image == UIImage(named: "DefaultProfileImage") {
+            deleteProfileImage()
+        }
+
         let name = nameTextField.text ?? ""
         let height = heightTextField.text ?? "Not entered"
         let weight = weightTextField.text ?? "Not entered"
@@ -164,7 +168,7 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBAction func didTapChangeProfileImage(_ sender: Any) {
         let dialog = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        dialog.addAction(UIAlertAction(title: "Remove Current Photo", style: .default, handler: {_ in }))
+        dialog.addAction(UIAlertAction(title: "Remove Current Photo", style: .default, handler: {_ in self.removeCurrentPhoto() }))
         dialog.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: {_ in self.activateCamera() }))
         dialog.addAction(UIAlertAction(title: "Choose From Library", style: .default, handler: {_ in self.activateCameraRoll() }))
         dialog.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
@@ -217,6 +221,23 @@ extension EditProfileViewController: PHPickerViewControllerDelegate, UIImagePick
         imagePicker.sourceType = .camera
         imagePicker.delegate = self
         present(imagePicker, animated: true)
+    }
+
+    private func removeCurrentPhoto() {
+        editProfileImageView.image = UIImage(named: "DefaultProfileImage")
+    }
+
+    private func deleteProfileImage() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let storageRef = Storage.storage().reference(forURL: "gs://mytrainingapp-9ffaa.appspot.com").child("images")
+        let uidImageRef = storageRef.child("\(uid).jpeg")
+        uidImageRef.delete { error in
+            if let error = error {
+                print("画像削除失敗　" + error.localizedDescription)
+            } else {
+                print("画像削除完了")
+            }
+        }
     }
 
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
