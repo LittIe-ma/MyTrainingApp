@@ -43,8 +43,8 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     private func firestoreGetData() {
-        guard let user = Auth.auth().currentUser?.uid else { return }
-        let usersRef = Firestore.firestore().collection("users").document(user)
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let usersRef = Firestore.firestore().collection("users").document(uid)
         usersRef.getDocument(completion: { (document, error) in
             if let document = document {
                 print("ユーザー情報取得成功")
@@ -96,13 +96,14 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
         let squat = squatTextField.text ?? "Not entered"
         let deadLift = deadLiftTextField.text ?? "Not entered"
         firestoreSetData(name: name, height: height, weight: weight, benchPress: benchPress, squat: squat, deadLift: deadLift)
+        uploadProfileImage()
 
         Router.shared.backProfile(from: self)
     }
 
     private func firestoreSetData(name: String, height: String, weight: String, benchPress: String, squat: String, deadLift: String) {
-        guard let user = Auth.auth().currentUser?.uid else { return }
-        Firestore.firestore().collection("users").document(user).setData([
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("users").document(uid).setData([
             "name": name,
             "height": height,
             "weight": weight,
@@ -113,20 +114,46 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
             if let error = error {
                 print("プロフィール更新失敗　" + error.localizedDescription)
             } else {
-                print("プロフィール更新成功")
+                print("プロフィール更新完了")
             }
         })
     }
 
     private func displayProfileImage() {
-        let storageRef = Storage.storage().reference(forURL: "gs://mytrainingapp-9ffaa.appspot.com")
-        let defaultProfileImageRef = storageRef.child("DefaultProfileImage.jpeg")
-        defaultProfileImageRef.downloadURL { url, error in
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let storageRef = Storage.storage().reference(forURL: "gs://mytrainingapp-9ffaa.appspot.com").child("images")
+        let uidImageRef  = storageRef.child("\(uid).jpeg")
+        uidImageRef.downloadURL { url, error in
             if let error = error {
                 print("画像取得失敗" + error.localizedDescription)
             } else {
-                print("画像取得成功 url: \(String(describing: url))")
+                print("画像取得完了 url: \(String(describing: url))")
                 self.editProfileImageView.kf.setImage(with: url)
+            }
+        }
+    }
+
+    private func uploadProfileImage() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        guard let user = Auth.auth().currentUser else { return }
+        guard let imageData = editProfileImageView.image?.jpegData(compressionQuality: 0.3) else { return }
+        let storageRef = Storage.storage().reference(forURL: "gs://mytrainingapp-9ffaa.appspot.com").child("images")
+        let imageRef = storageRef.child("\(uid).jpeg")
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpeg"
+        _ = imageRef.putData(imageData, metadata: metaData) { (metadata, error) in
+            guard metadata != nil else { return }
+            imageRef.downloadURL { (url, error) in
+                guard let photoURL = url else { return }
+                let request = user.createProfileChangeRequest()
+                request.photoURL = photoURL
+                request.commitChanges { error in
+                    if let error = error {
+                        print("プロフィール画像更新失敗" + error.localizedDescription)
+                    } else {
+                        print("プロフィール画像更新完了")
+                    }
+                }
             }
         }
     }
@@ -170,7 +197,24 @@ extension EditProfileViewController: UITextFieldDelegate {
     }
 }
 
-extension EditProfileViewController: PHPickerViewControllerDelegate {
+extension EditProfileViewController: PHPickerViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private func activateCameraRoll() {
+        var configuration = PHPickerConfiguration()
+        configuration.selectionLimit = 1
+        configuration.filter = .images
+        configuration.preferredAssetRepresentationMode = .current
+        let picker = PHPickerViewController(configuration: configuration)
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+
+    private func activateCamera() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .camera
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
+    }
+
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true)
         if let itemProvider = results.first?.itemProvider, itemProvider.canLoadObject(ofClass: UIImage.self) {
@@ -185,25 +229,6 @@ extension EditProfileViewController: PHPickerViewControllerDelegate {
                 }
             }
         }
-    }
-
-    private func activateCameraRoll() {
-        var configuration = PHPickerConfiguration()
-        configuration.selectionLimit = 1
-        configuration.filter = .images
-        configuration.preferredAssetRepresentationMode = .current
-        let picker = PHPickerViewController(configuration: configuration)
-        picker.delegate = self
-        present(picker, animated: true)
-    }
-}
-
-extension EditProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    private func activateCamera() {
-        let imagePicker = UIImagePickerController()
-        imagePicker.sourceType = .camera
-        imagePicker.delegate = self
-        present(imagePicker, animated: true)
     }
 
     func imagePickerController(_ imagePicker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {

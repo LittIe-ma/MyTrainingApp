@@ -87,9 +87,10 @@ class ProfileViewController: UIViewController {
     }
 
     private func displayProfileImage() {
-        let storageRef = Storage.storage().reference(forURL: "gs://mytrainingapp-9ffaa.appspot.com")
-        let defaultProfileImageRef = storageRef.child("DefaultProfileImage.jpeg")
-        defaultProfileImageRef.downloadURL { url, error in
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let storageRef = Storage.storage().reference(forURL: "gs://mytrainingapp-9ffaa.appspot.com").child("images")
+        let uidImageRef = storageRef.child("\(uid).jpeg")
+        uidImageRef.downloadURL { url, error in
             if let error = error {
                 print("画像取得失敗" + error.localizedDescription)
             } else {
