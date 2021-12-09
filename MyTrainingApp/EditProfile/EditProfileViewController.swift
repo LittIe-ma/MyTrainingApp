@@ -10,6 +10,7 @@ import Firebase
 import FirebaseStorage
 import Kingfisher
 import PhotosUI
+import PKHUD
 
 class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
@@ -82,6 +83,7 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     }
 
     @IBAction func didTapSave(_ sender: Any) {
+        HUD.show(.progress)
         guard !(nameTextField.text ?? "").isEmpty else {
             let dialog = UIAlertController(title: "Name is empty field.", message: "Please enter your name.", preferredStyle: .alert)
             dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -97,8 +99,10 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
         let deadLift = deadLiftTextField.text ?? "Not entered"
         firestoreSetData(name: name, height: height, weight: weight, benchPress: benchPress, squat: squat, deadLift: deadLift)
         uploadProfileImage()
-
-        Router.shared.backProfile(from: self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            HUD.hide(animated: true)
+            Router.shared.backProfile(from: self)
+        }
     }
 
     private func firestoreSetData(name: String, height: String, weight: String, benchPress: String, squat: String, deadLift: String) {
