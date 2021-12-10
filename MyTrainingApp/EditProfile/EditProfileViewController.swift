@@ -75,11 +75,31 @@ class EditProfileViewController: UIViewController, UIGestureRecognizerDelegate {
 
     private func displayProfileData(name: String, height: String, weight: String, benchPress: String, squat: String, deadLift: String) {
         nameTextField.text = name
-        heightTextField.text = height
-        weightTextField.text = weight
-        benchPressTextField.text = benchPress
-        squatTextField.text = squat
-        deadLiftTextField.text = deadLift
+        if height == "Not entered" {
+            heightTextField.text = ""
+        } else {
+            heightTextField.text = height
+        }
+        if weight == "Not entered" {
+            weightTextField.text = ""
+        } else {
+            weightTextField.text = weight
+        }
+        if benchPress == "Not entered" {
+            benchPressTextField.text = ""
+        } else {
+            benchPressTextField.text = benchPress
+        }
+        if squat == "Not entered" {
+            squatTextField.text = ""
+        } else {
+            squatTextField.text = squat
+        }
+        if deadLift == "Not entered" {
+            deadLiftTextField.text = ""
+        } else {
+            deadLiftTextField.text = deadLift
+        }
     }
 
     @IBAction func didTapSave(_ sender: Any) {
