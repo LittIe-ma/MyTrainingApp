@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import PKHUD
 
 class SettingsViewController: UIViewController {
 
@@ -56,17 +57,7 @@ class SettingsViewController: UIViewController {
         dialog.addAction(UIAlertAction(title: "Withdraw", style: .destructive, handler: { _ in
             self.firestoreDeleteData()
             self.deleteProfileImage()
-            Auth.auth().currentUser?.delete { error in
-                if let error = error {
-                    print("退会失敗" + error.localizedDescription)
-                    let dialog = UIAlertController(title: "Withdraw Failure", message: error.localizedDescription, preferredStyle: .alert)
-                    dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in self.loginDialog() }))
-                    self.present(dialog, animated: true, completion: nil)
-                } else {
-                    print("退会完了")
-                    Router.shared.showReStart()
-                }
-            }
+            self.deleteUser()
         }))
         dialog.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
         self.present(dialog, animated: true, completion: nil)
@@ -96,35 +87,51 @@ class SettingsViewController: UIViewController {
         }
     }
 
-    private func loginDialog() {
+    private func deleteUser() {
+        HUD.show(.progress)
+        Auth.auth().currentUser?.delete { error in
+            if let error = error {
+                print("退会失敗" + error.localizedDescription)
+                let dialog = UIAlertController(title: "Withdraw Failure", message: error.localizedDescription, preferredStyle: .alert)
+                dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in self.credentialDialog() }))
+                self.present(dialog, animated: true, completion: nil)
+            } else {
+                print("退会完了")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    Router.shared.showReStart()
+                }
+            }
+        }
+    }
+
+    private func credentialDialog() {
         guard let userEmail = Auth.auth().currentUser?.email else { return }
         var passwordTextField: UITextField?
-        let dialog = UIAlertController(title: "Login", message: "Please enter the \"\(userEmail)\" password.", preferredStyle: .alert)
+        let dialog = UIAlertController(title: "Withdrawal process", message: "Please enter the \"\(userEmail)\" password.", preferredStyle: .alert)
         dialog.addTextField(configurationHandler: { (textField: UITextField) in
             passwordTextField = textField
             textField.placeholder = "Password"
             textField.password()
         })
-        dialog.addAction(UIAlertAction(title: "Login", style: .default, handler: { _ in
+        dialog.addAction(UIAlertAction(title: "Withdrow", style: .default, handler: { _ in
             if let password = passwordTextField?.text {
-                self.login(password: password)
+                self.credentiallogin(password: password)
             }
         }))
-        dialog.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
         self.present(dialog, animated: true, completion: nil)
     }
 
-    private func login(password: String) {
+    private func credentiallogin(password: String) {
         guard let email = Auth.auth().currentUser?.email else { return }
         Auth.auth().signIn(withEmail: email, password: password, completion: { (result, error) in
             if let user = result?.user {
                 print("ログイン完了 uid:" + user.uid)
-                self.withdraw()
+                self.deleteUser()
             } else if let error = error {
                 print("ログイン失敗 " + error.localizedDescription)
                 let dialog = UIAlertController(title: "Login Failure", message: error.localizedDescription, preferredStyle: .alert)
                 dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                dialog.addAction(UIAlertAction(title: "Retry", style: .destructive, handler: { _ in self.loginDialog() }))
+                dialog.addAction(UIAlertAction(title: "Retry", style: .destructive, handler: { _ in self.credentialDialog() }))
                 self.present(dialog, animated: true, completion: nil)
             }
         })
