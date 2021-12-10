@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class SettingsViewController: UIViewController {
 
@@ -54,6 +55,7 @@ class SettingsViewController: UIViewController {
         let dialog = UIAlertController(title: "Are you sure you want to do this?", message: "", preferredStyle: .actionSheet)
         dialog.addAction(UIAlertAction(title: "Withdraw", style: .destructive, handler: { _ in
             self.firestoreDeleteData()
+            self.deleteProfileImage()
             Auth.auth().currentUser?.delete { error in
                 if let error = error {
                     print("退会失敗" + error.localizedDescription)
@@ -77,6 +79,19 @@ class SettingsViewController: UIViewController {
                 print("ユーザー削除失敗　" + error.localizedDescription)
             } else {
                 print("ユーザー削除完了")
+            }
+        }
+    }
+
+    private func deleteProfileImage() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let storageRef = Storage.storage().reference(forURL: "gs://mytrainingapp-9ffaa.appspot.com").child("images")
+        let uidImageRef = storageRef.child("\(uid).jpeg")
+        uidImageRef.delete { error in
+            if let error = error {
+                print("画像削除失敗　" + error.localizedDescription)
+            } else {
+                print("画像削除完了")
             }
         }
     }
